@@ -638,5 +638,110 @@
     "id": "spätzle",
     "name": "Spätzle",
     "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "burrata",
+    "name": "Burrata",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "schupfnudeln",
+    "name": "Schupfnudeln (fertig)",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "linguine",
+    "name": "Linguine",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "wirsing",
+    "name": "Wirsing",
+    "category": "Gemüse"
+  },
+  {
+    "id": "paprika_geraeuchert",
+    "name": "Geräuchertes Paprikapulver",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "meerrettich",
+    "name": "Kren / Meerrettich",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "weisswein",
+    "name": "Weißwein (zum Kochen)",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "sahnejoghurt",
+    "name": "Griechisches Joghurt",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "maisstaerke",
+    "name": "Speisestärke",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "haferflocken",
+    "name": "Haferflocken",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "emmentaler",
+    "name": "Emmentaler",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "kohl",
+    "name": "Weißkohl",
+    "category": "Gemüse"
+  },
+  {
+    "id": "mayonnaise",
+    "name": "Mayonnaise",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "ananas",
+    "name": "Ananas",
+    "category": "Obst"
+  },
+  {
+    "id": "sultanas",
+    "name": "Rosinen",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "safran",
+    "name": "Safran",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "fruehlingszwiebel",
+    "name": "Frühlingszwiebeln",
+    "category": "Gemüse"
+  },
+  {
+    "id": "tomaten_dose",
+    "name": "Stückige Tomaten (Dose)",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "tortellini",
+    "name": "Tortellini (Kühlregal)",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "makkaroni",
+    "name": "Makkaroni",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "pinienkerne",
+    "name": "Pinienkerne",
+    "category": "Vorrat & Würzmittel"
   }
 ]

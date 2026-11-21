@@ -1,38 +1,49 @@
-# Was kochen wir? – persönlicher Rezeptgenerator
+# Bettys Kochecke – Rezeptgenerator (Qualitätsausgabe v6)
 
-Statische Website für Cloudflare Pages. Keine Datenbank, kein Backend und keine KI-API erforderlich.
+Statische Website für Cloudflare Workers oder Cloudflare Pages. Keine Datenbank, kein Benutzerkonto und keine KI-API notwendig. QR-Erstellung im Browser per qrcodejs-CDN.
 
-## Enthalten
-- Zutatenbibliothek mit Kategorien und Suche
-- 500 vorbereitete Rezeptdatensätze
-- Auswahl wird lokal gespeichert und in einen persönlichen URL-Link codiert
-- Wiederverwendbarer Zutatenlisten-QR: Jeder Scan zieht automatisch ein neues passendes Zufallsrezept
-- Direkter Link zum jeweils angezeigten Rezept kann separat kopiert werden
-- Strikte Zufallsauswahl: Alle benötigten Rezeptzutaten müssen ausgewählt sein (Salz, Pfeffer und Öl gelten als Grundzutaten)
-- Pasta-Schwerpunkt; keine Suppen und Eintöpfe
+## Was neu ist
+
+- **34 einzeln ausgearbeitete Alltagsgerichte** aus einer Recherche bei Chefkoch, Einfach Kochen und BBC Good Food, davon **18 Pasta- und Nudelgerichte**. Keine Suppen oder Eintöpfe.
+- Jede Rezeptkarte verlinkt das **bewertete Inspirationsrezept** mit Bewertungsstand vom 21.11.2026. Die dortigen Sterne beziehen sich ausdrücklich **nicht** auf unsere vereinfachte Rezeptfassung.
+- Eigene Mengen für **zwei Portionen** und vier konkrete Arbeitsschritte pro Gericht. Diese Fassungen sind noch **nicht praktisch probegekocht**.
+- Zutatenbibliothek von 128 auf **149** ergänzt. Alte Zutaten-IDs und deren Reihenfolge bleiben erhalten.
+- Normale Pastasorten (z.B. Penne, Fusilli, Spaghetti) dürfen gegenseitig ersetzt werden. Alle weiteren Rezeptzutaten müssen exakt ausgewählt sein.
+- Zutatenliste standardmäßig eingeklappt. QR-Link führt direkt zum Zufallsrezept, „Nächstes Rezept“ bleibt beim Scrollen sichtbar.
+- Alte kompakte QR-Codes (128 Zutaten/16 Byte) werden auch mit 149 Zutaten akzeptiert.
+
+## Neue Dateien in dein bestehendes Git-Projekt kopieren
+
+Bei Aktualisierung einer vorhandenen Installation diese **fünf Dateien** ersetzen:
+
+1. `app.js`
+2. `index.html`
+3. `styles.css`
+4. `data/recipes.json`
+5. `data/ingredients.json`
+
+Optional zusätzlich die Dokumentation übernehmen. Anschließend in Git Extensions Änderungen kontrollieren, committen und auf GitHub pushen; Cloudflare veröffentlicht den neuen Stand über die bestehende Verbindung.
+
+**Wichtig:** Die Qualitätssammlung ersetzt alle 500 zuvor automatisch generierten Rezepte durch 34 redaktionell überarbeitete. Dadurch kann es bei kleinen Zutatenauswahlen seltener einen Treffer geben. Frühere direkte Rezeptlinks mit alten Rezept-IDs erzeugen automatisch einen neuen passenden Vorschlag, soweit eine Zutatenliste vorhanden ist.
 
 ## Lokal testen
-Einfach `index.html` im Browser öffnen. Falls der Browser `fetch()` für lokale JSON-Dateien blockiert, einen lokalen statischen Server verwenden, z. B.:
+
+Im Projektordner:
 
 ```bash
 python -m http.server 8000
 ```
 
-Dann `http://localhost:8000` öffnen.
+Dann `http://localhost:8000/` öffnen. Das direkte Öffnen der `index.html` per `file://` kann JSON-Fetch blockieren.
 
-## Veröffentlichung über GitHub + Cloudflare Pages
-1. Dieses Projekt in ein neues GitHub-Repository hochladen.
-2. Cloudflare Dashboard → **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
-3. GitHub verbinden und das Repository auswählen.
-4. Framework preset: **None**.
-5. Build command leer lassen.
-6. Build output directory: `/` (Projekt-Root).
-7. Deploy klicken.
+## Auswahlkriterien und Quellen
 
-Bei jedem Push auf den verbundenen Branch veröffentlicht Cloudflare Pages die Änderungen automatisch.
+Siehe `RECHERCHE-UND-QUELLEN.md`. Eine mathematisch nachgewiesene Auswahl aus den oberen zehn Prozent **aller** Rezepte der jeweiligen Portale ist aufgrund fehlender vollständiger Bewertungsverteilungen nicht möglich. Die Auswahl verwendet eine dokumentierte strenge praktische Bewertungsgrenze.
 
-## Hinweise zur Datenbank
-Die 500 Einträge sind ein erster kuratierter, regelbasiert zusammengestellter Rezeptbestand. Die Rezepte sind Rezeptideen mit generischen Zubereitungsschritten und sollten vor dem Kochen hinsichtlich Garzeiten, Würzung und Mengen geprüft und bei Bedarf redaktionell verbessert werden. Sie sind keine geprüfte redaktionelle Kochbuchsammlung.
+## Technische Hinweise
 
-## Link- und QR-Code-Verhalten
-Die ausgewählten Zutaten-IDs werden als `?i=id1,id2,...` in der URL gespeichert. Der QR-Code verwendet zusätzlich `&draw=1`; beim Öffnen wird automatisch ein zufälliges Rezept erzeugt, dessen vollständige Zutatenliste in der Auswahl enthalten ist. Nach der Ziehung wird die Browser-Adresse zu einem direkten Rezeptlink (`?i=...&recipe=rNNNN`). Es gibt kein Benutzerkonto und keine zentrale Synchronisierung. Wer den Link besitzt, kann dieselbe Auswahl öffnen. Die lokale Auswahl wird zusätzlich im Browser gespeichert.
+- Zutaten werden in `localStorage` und als URL-Bitmaske (`?z=...`) gespeichert.
+- Der QR-Link verwendet `?z=...&draw=1`: Jeder Aufruf zieht ein neues passendes Rezept.
+- Die Rezept-Zufallsauswahl prüft strikt alle Pflichtzutaten und unterstützt nur klar definierte Pastasorten als gleichwertigen Austausch.
+- `?z=...&recipe=qNNN` ist der Direktlink zu einem ausgewählten Rezept.
+- Neue Zutaten werden immer **ans Ende** der `ingredients.json` angehängt – Reihenfolge nie ändern, sonst verlieren bestehende QR-Codes ihre Bedeutung.

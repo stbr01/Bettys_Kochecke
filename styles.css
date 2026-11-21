@@ -13,3 +13,8 @@
 @media(max-width:700px){.ingredient-heading-actions{gap:8px}.selected-count span{display:none}#toggleIngredients{font-size:11px;padding:10px}.result-navigation #anotherRecipe{flex:1}.result-navigation .result-kicker{display:none}}
 
 @media(max-width:350px){.qr-wrap{width:100%;height:auto;aspect-ratio:1}.qr-wrap canvas,.qr-wrap img{max-width:100%;height:auto}}
+
+/* Qualitäts-Rezeptdatenbank: nachvollziehbare Inspirationsquelle */
+.recipe-source{margin-top:22px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.6}
+.recipe-source a{color:var(--green-dark);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.recipe-source p{font-size:11px;margin:6px 0 0;line-height:1.6}

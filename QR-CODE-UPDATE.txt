@@ -1,1 +1,5 @@
-Version 5: QR-Link verwendet Base64url-Bitmaske (22 Zeichen bei 128 Zutaten). QR-Fehlerkorrektur L und 320x320 Pixel. Alte Hex-Links aus Version 4 bleiben lesbar. Nur app.js muss ersetzt werden.
+Version 6: 149 Zutaten werden als kompakte Base64url-Bitmaske gespeichert.
+Alte QR-Codes mit 128 Zutaten werden beim Laden mit Null-Bits für die 21 neuen Zutaten ergänzt.
+Die Reihenfolge der ursprünglichen 128 Zutaten bleibt unverändert.
+Der QR-Code verlinkt weiterhin die Liste, öffnet direkt ein Zufallsrezept und zeigt den Nächstes-Rezept-Button.
+Wichtig: Wird die Cloudflare-Domain geändert, müssen bereits erzeugte QR-Codes neu erstellt werden.

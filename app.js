@@ -1,7 +1,7 @@
 const state = { ingredients: [], recipes: [], selected: new Set(), activeCategory: "Alle", lastRecipeIds: [] };
 const $ = (id) => document.getElementById(id);
-const categoryOrder = ["Alle","Gemüse","Fleisch & Geflügel","Fisch & Meeresfrüchte","Milchprodukte & Eier","Hülsenfrüchte & Tofu","Nudeln, Reis & Getreide","Vorrat & Würzmittel","Kräuter & Gewürze"];
-const categoryEmoji = {"Gemüse":"🥕","Fleisch & Geflügel":"🍗","Fisch & Meeresfrüchte":"🐟","Milchprodukte & Eier":"🧀","Hülsenfrüchte & Tofu":"🫘","Nudeln, Reis & Getreide":"🍝","Vorrat & Würzmittel":"🫙","Kräuter & Gewürze":"🌿"};
+const categoryOrder = ["Alle","Gemüse","Fleisch & Geflügel","Fisch & Meeresfrüchte","Milchprodukte & Eier","Hülsenfrüchte & Tofu","Nudeln, Reis & Getreide","Vorrat & Würzmittel","Kräuter & Gewürze","Obst"];
+const categoryEmoji = {"Gemüse":"🥕","Fleisch & Geflügel":"🍗","Fisch & Meeresfrüchte":"🐟","Milchprodukte & Eier":"🧀","Hülsenfrüchte & Tofu":"🫘","Nudeln, Reis & Getreide":"🍝","Vorrat & Würzmittel":"🫙","Kräuter & Gewürze":"🌿","Obst":"🍍"};
 
 async function init(){
   try{
@@ -36,13 +36,16 @@ async function init(){
       else showNoMatch("Dieser Zutatenlisten-Link enthält zu wenige gültige Zutaten. Bitte wähle mindestens zwei Zutaten aus.");
     } else if(recipeId){
       const recipe=state.recipes.find(x=>x.id===recipeId);
-      if(recipe && recipe.ingredientIds.every(id=>state.selected.has(id))){
-        recipe.matched=[...recipe.ingredientIds];
-        renderRecipe(recipe);
+      if(recipe && resolveRecipe(recipe)){
+        renderRecipe(recipe,resolveRecipe(recipe));
         $("resultSection").hidden=false;
         scrollToRecipe();
+      } else if(state.selected.size>=2){
+        // A previously shared recipe ID may have disappeared during the quality update.
+        // Keep the saved ingredients and offer a fresh matching recipe instead.
+        showRandomRecipe();
       } else {
-        showNoMatch("Dieses Rezept passt nicht vollständig zur gespeicherten Zutatenliste. Bitte ziehe ein neues Zufallsrezept.");
+        showNoMatch("Dieser alte Rezeptlink hat keine gültige Auswahl mehr. Bitte wähle mindestens zwei Zutaten aus.");
       }
     }
   }catch(err){$("ingredientGrid").innerHTML=`<div class="empty-state">${escapeHtml(err.message)} Bitte lade die Seite neu.</div>`;}
@@ -63,8 +66,8 @@ function renderIngredients(){
   $("ingredientGrid").querySelectorAll("input").forEach(input=>input.addEventListener("change",()=>{input.checked?state.selected.add(input.value):state.selected.delete(input.value);persistSelection();updateSelection({clearRecipe:true});renderIngredients();}));
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-// 128 ingredients fit into 16 bytes / 22 Base64url characters.
-// The bit positions are tied to the stable ingredients.json order.
+// A compact bitset; positions of existing ingredients must never change.
+// Old QR codes from the 128-ingredient version remain readable after additions.
 function encodeSelection(){
   const bytes=new Uint8Array(Math.ceil(state.ingredients.length/8));
   state.ingredients.forEach((item,index)=>{if(state.selected.has(item.id))bytes[index>>3]|=1<<(index&7)});
@@ -82,7 +85,11 @@ function decodeSelection(value){
       const binary=atob(value.replace(/-/g,"+").replace(/_/g,"/").padEnd(Math.ceil(value.length/4)*4,"="));
       bytes=Array.from(binary,c=>c.charCodeAt(0));
     }else return [];
-    if(bytes.length!==Math.ceil(state.ingredients.length/8))return [];
+    const expected=Math.ceil(state.ingredients.length/8);
+    // Old compact QR codes contain 16 bytes (128 initial ingredients). Pad
+    // only added ingredients with zeros, keeping legacy selections intact.
+    if(bytes.length<16 || bytes.length>expected)return [];
+    while(bytes.length<expected)bytes.push(0);
     return state.ingredients.filter((item,index)=>!!(bytes[index>>3]&(1<<(index&7)))).map(item=>item.id);
   }catch{return [];}
 }
@@ -124,43 +131,63 @@ function showNoMatch(message){
   $("matchNote").textContent="";
   scrollToRecipe();
 }
+// Only interchangeable long/short pasta shapes may be substituted.
+// Gnocchi, lasagne sheets and filled pasta remain recipe-specific.
+const PASTA_SHAPES=["spaghetti","penne","fusilli","rigatoni","tagliatelle","linguine","farfalle","makkaroni"];
+function resolveRecipe(recipe){
+  if(!Array.isArray(recipe.ingredientIds)||!recipe.ingredientIds.length)return null;
+  const originalShape=recipe.category==="Pasta & Nudelgerichte"
+    ? recipe.ingredientIds.find(id=>PASTA_SHAPES.includes(id)) : null;
+  const replacement=originalShape&&!state.selected.has(originalShape)
+    ? PASTA_SHAPES.find(id=>state.selected.has(id)) : null;
+  const ids=recipe.ingredientIds.map(id=>id===originalShape&&replacement?replacement:id);
+  if(!ids.every(id=>state.selected.has(id)))return null;
+  return {ids,originalShape:replacement?originalShape:null,replacement:replacement||null};
+}
+function swapPastaWord(text,matched){
+  if(!matched?.replacement)return text;
+  const names=new Map(state.ingredients.map(x=>[x.id,x.name]));
+  const oldName=names.get(matched.originalShape),newName=names.get(matched.replacement);
+  if(!oldName||!newName)return text;
+  return String(text).replace(new RegExp("\\b"+oldName+"\\b","gi"),newName);
+}
 function showRandomRecipe(){
   if(state.selected.size<2)return;
-  // Strict matching: every recipe ingredient must be active in the saved selection.
-  // Salt, pepper and oil are pantry staples and are added separately on the recipe card.
-  const matching=state.recipes
-    .filter(r=>Array.isArray(r.ingredientIds) && r.ingredientIds.length>0 && r.ingredientIds.every(id=>state.selected.has(id)));
+  // Every required ingredient must be active; only pasta shapes may replace each other.
+  const matching=state.recipes.map(r=>({recipe:r,matching:resolveRecipe(r)})).filter(x=>x.matching);
   if(!matching.length){
     const p=new URLSearchParams();setSelectionParams(p);
     history.replaceState(null,"",location.pathname+"?"+p.toString());
-    showNoMatch("Leider gibt es in der aktuellen Rezeptdatenbank kein Rezept, dessen komplette Zutatenliste in deiner Auswahl enthalten ist. Wähle weitere Zutaten aus oder ergänze deine Auswahl.");
+    showNoMatch("Leider gibt es noch kein Gericht, für das alle benötigten Zutaten in deiner Auswahl enthalten sind. Wähle weitere Zutaten aus. Bei normalen Nudelgerichten können unterschiedliche Pastasorten verwendet werden.");
     return;
   }
-  // Avoid immediate repeats; once every matching recipe has appeared, start a new round.
-  let pool=matching.filter(r=>!state.lastRecipeIds.includes(r.id));
+  let pool=matching.filter(x=>!state.lastRecipeIds.includes(x.recipe.id));
   if(!pool.length){state.lastRecipeIds=[];pool=matching;}
   const chosen=pool[Math.floor(Math.random()*pool.length)];
-  chosen.matched=[...chosen.ingredientIds];
-  state.lastRecipeIds.push(chosen.id);
+  state.lastRecipeIds.push(chosen.recipe.id);
   if(state.lastRecipeIds.length>Math.max(25,matching.length))state.lastRecipeIds.shift();
-  renderRecipe(chosen);
-  setRecipeUrl(chosen.id);
+  renderRecipe(chosen.recipe,chosen.matching);
+  setRecipeUrl(chosen.recipe.id);
   $("resultSection").hidden=false;
   scrollToRecipe();
 }
-function renderRecipe(r){
+function renderRecipe(r, resolved=resolveRecipe(r)){
+  if(!resolved)return;
   const names=new Map(state.ingredients.map(x=>[x.id,x.name]));
-  const matched=r.ingredientIds.filter(id=>state.selected.has(id)).map(id=>names.get(id)).filter(Boolean);
-  // Strict matching means every recipe ingredient is selected; no inactive ingredient is listed.
-  const ingredients=r.ingredients.filter(x=>state.selected.has(x.id)).map(x=>({name:names.get(x.id)||x.id,amount:x.amount,unit:x.unit}));
-  const list=ingredients.map(x=>`<li><span>${escapeHtml(x.name)}</span><small>${x.amount} ${escapeHtml(x.unit)}</small></li>`).join("");
+  const ingredients=r.ingredients.map((x,index)=>({...x,id:resolved.ids[index]}));
+  const list=ingredients.map(x=>`<li><span>${escapeHtml(names.get(x.id)||x.id)}</span><small>${escapeHtml(x.amount)} ${escapeHtml(x.unit)}</small></li>`).join("");
+  const staples=(r.staples||["salz","pfeffer","olivenoel"]).map(id=>({salz:"Salz",pfeffer:"Pfeffer",olivenoel:"Öl"}[id]||id));
+  const stapleLi=staples.length?`<li><span>${escapeHtml(staples.join(", "))}</span><small>nach Bedarf</small></li>`:"";
+  const source=r.source&&/^https:\/\//.test(r.source.url)?r.source:null;
+  const sourceLine=source?`<div class="recipe-source"><span>⭐ Bewertetes Inspirationsrezept: </span><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.site)} · ${escapeHtml(Number(source.rating).toFixed(1).replace(".",","))}/5 aus ${escapeHtml(source.votes)} Bewertungen</a><p>Das hier ist unsere eigenständig vereinfachte Alltagsfassung. Die Bewertung gilt für das verlinkte Original, nicht für diese Fassung. Stand: ${escapeHtml(source.asOf||"2026-11-21")}.</p></div>`:"";
   $("recipeCard").innerHTML=`
     <div class="recipe-topline"><span class="pill">${escapeHtml(r.category)}</span><span class="pill">🎲 Zufallstreffer</span></div>
-    <h2 class="recipe-title">${escapeHtml(r.title)}</h2><p class="recipe-description">${escapeHtml(r.description)}</p>
-    <div class="recipe-meta"><span>◷ ${r.minutes} Minuten</span><span>♧ ${r.servings} Portionen</span><span>✓ ${matched.length} Zutaten aus deiner Auswahl</span></div>
-    <div class="recipe-columns"><section><h3>Zutaten</h3><ul class="ingredient-list">${list}<li><span>Salz, Pfeffer & Öl</span><small>nach Bedarf</small></li></ul></section>
-    <section><h3>Zubereitung</h3><ol class="steps">${r.steps.map(s=>`<li>${escapeHtml(s)}</li>`).join("")}</ol></section></div>`;
-  $("matchNote").textContent=`Alle ${matched.length} benötigten Rezeptzutaten sind in deiner Auswahl enthalten. Salz, Pfeffer und Öl gelten als Grundzutaten.`;
+    <h2 class="recipe-title">${escapeHtml(swapPastaWord(r.title,resolved))}</h2><p class="recipe-description">${escapeHtml(r.description)}</p>
+    <div class="recipe-meta"><span>◷ ${r.minutes} Minuten</span><span>♧ ${r.servings} Portionen</span><span>✓ ${resolved.ids.length} Zutaten aus deiner Auswahl</span></div>
+    <div class="recipe-columns"><section><h3>Zutaten</h3><ul class="ingredient-list">${list}${stapleLi}</ul></section>
+    <section><h3>Zubereitung</h3><ol class="steps">${r.steps.map(s=>`<li>${escapeHtml(swapPastaWord(s,resolved))}</li>`).join("")}</ol></section></div>
+    ${sourceLine}`;
+  $("matchNote").textContent=`Alle ${resolved.ids.length} benötigten Rezeptzutaten sind in deiner Auswahl enthalten.${resolved.replacement?" Die Nudelsorte wurde passend zu deinem Vorrat getauscht.":""} Salz, Pfeffer und Öl gelten, soweit benötigt, als Grundzutaten.`;
 }
 function currentShareUrl(){
   const url=new URL(location.href);url.search="";url.hash="";
