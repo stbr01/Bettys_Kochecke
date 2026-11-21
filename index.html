@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="description" content="Dein persönlicher Zufalls-Rezeptgenerator. Zutaten auswählen und passende Rezepte entdecken.">
+  <title>Was kochen wir? – Dein Rezeptgenerator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Startseite"><span class="brand-mark">✳</span><span>was kochen wir<span class="brand-dot">.</span></span></a>
+    <button id="shareTop" class="button button-quiet" type="button">↗ Teilen</button>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">DEIN PERSÖNLICHER REZEPTFINDER</div>
+      <h1>Was kochen wir <em>heute?</em></h1>
+      <p>Wähle aus, was du gerne verwenden möchtest. Wir finden ein passendes Rezept – auch wenn nicht alle ausgewählten Zutaten hineingehören.</p>
+      <div class="hero-meta"><span>✦ 500 Rezeptideen</span><span>♡ Ohne Suppen & Eintöpfe</span><span>↗ Mit Pasta-Schwerpunkt</span></div>
+    </section>
+
+    <section class="panel ingredients-panel">
+      <div class="section-heading">
+        <div><div class="eyebrow">SCHRITT 1</div><h2>Was hast du da?</h2></div>
+        <div class="selected-count"><strong id="selectedCount">0</strong><span>ausgewählt</span></div>
+      </div>
+      <div class="toolbar">
+        <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Zutat suchen …" autocomplete="off"></label>
+        <button id="clearSelection" class="text-button" type="button">Auswahl leeren</button>
+      </div>
+      <div id="categoryTabs" class="category-tabs" aria-label="Zutatenkategorien"></div>
+      <div id="ingredientGrid" class="ingredient-grid"></div>
+      <div class="selection-footer">
+        <span id="selectionHint">Wähle mindestens zwei Zutaten aus.</span>
+        <button id="findRecipe" class="button button-primary" type="button" disabled>🎲 Zufallsrezept finden</button>
+      </div>
+    </section>
+
+    <section id="resultSection" class="result-section" hidden>
+      <div class="result-kicker">DEIN ZUFALLSTREFFER</div>
+      <article id="recipeCard" class="recipe-card"></article>
+      <div class="result-actions">
+        <button id="anotherRecipe" class="button button-primary" type="button">↻ Nächstes Rezept</button>
+        <button id="shareResult" class="button button-outline" type="button">QR-Code & Link</button>
+      </div>
+      <p id="matchNote" class="match-note"></p>
+    </section>
+
+    <section class="howto">
+      <div class="howto-icon">✳</div>
+      <div><strong>Deine Auswahl bleibt erhalten.</strong><p>Mit „Link & QR-Code“ kannst du deine Zutatenliste speichern, am Handy öffnen oder mit anderen teilen.</p></div>
+    </section>
+    <footer>Ein kleiner Helfer für die tägliche Frage: Was kochen wir heute?</footer>
+  </main>
+
+  <dialog id="shareDialog" class="share-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Schließen">×</button></form>
+    <div class="eyebrow">DEINE ZUTATENLISTE</div>
+    <h2>Link speichern & teilen</h2>
+    <p>Dieser Link enthält deine ausgewählten Zutaten. Du kannst ihn als Lesezeichen speichern oder den QR-Code scannen.</p>
+    <div id="qrcode" class="qr-wrap"><div class="qr-placeholder">QR-Code wird erstellt …</div></div>
+    <label class="link-label" for="shareUrl">Dein persönlicher Link</label>
+    <div class="copy-row"><input id="shareUrl" readonly><button id="copyLink" class="button button-primary" type="button">Kopieren</button></div>
+    <div id="copyStatus" class="copy-status" aria-live="polite"></div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,642 @@
+[
+  {
+    "id": "zwiebel",
+    "name": "Zwiebel",
+    "category": "Gemüse"
+  },
+  {
+    "id": "knoblauch",
+    "name": "Knoblauch",
+    "category": "Gemüse"
+  },
+  {
+    "id": "karotte",
+    "name": "Karotte",
+    "category": "Gemüse"
+  },
+  {
+    "id": "paprika",
+    "name": "Paprika",
+    "category": "Gemüse"
+  },
+  {
+    "id": "zucchini",
+    "name": "Zucchini",
+    "category": "Gemüse"
+  },
+  {
+    "id": "aubergine",
+    "name": "Aubergine",
+    "category": "Gemüse"
+  },
+  {
+    "id": "brokkoli",
+    "name": "Brokkoli",
+    "category": "Gemüse"
+  },
+  {
+    "id": "blumenkohl",
+    "name": "Blumenkohl",
+    "category": "Gemüse"
+  },
+  {
+    "id": "champignons",
+    "name": "Champignons",
+    "category": "Gemüse"
+  },
+  {
+    "id": "spinat",
+    "name": "Spinat",
+    "category": "Gemüse"
+  },
+  {
+    "id": "tomaten",
+    "name": "Tomaten",
+    "category": "Gemüse"
+  },
+  {
+    "id": "cherrytomaten",
+    "name": "Cherrytomaten",
+    "category": "Gemüse"
+  },
+  {
+    "id": "gurke",
+    "name": "Gurke",
+    "category": "Gemüse"
+  },
+  {
+    "id": "mais",
+    "name": "Mais",
+    "category": "Gemüse"
+  },
+  {
+    "id": "erbsen",
+    "name": "Erbsen",
+    "category": "Gemüse"
+  },
+  {
+    "id": "bohnen_gruen",
+    "name": "Grüne Bohnen",
+    "category": "Gemüse"
+  },
+  {
+    "id": "kuerbis",
+    "name": "Kürbis",
+    "category": "Gemüse"
+  },
+  {
+    "id": "lauch",
+    "name": "Lauch",
+    "category": "Gemüse"
+  },
+  {
+    "id": "sellerie",
+    "name": "Sellerie",
+    "category": "Gemüse"
+  },
+  {
+    "id": "fenchel",
+    "name": "Fenchel",
+    "category": "Gemüse"
+  },
+  {
+    "id": "spargel",
+    "name": "Spargel",
+    "category": "Gemüse"
+  },
+  {
+    "id": "rucola",
+    "name": "Rucola",
+    "category": "Gemüse"
+  },
+  {
+    "id": "oliven",
+    "name": "Oliven",
+    "category": "Gemüse"
+  },
+  {
+    "id": "kapern",
+    "name": "Kapern",
+    "category": "Gemüse"
+  },
+  {
+    "id": "getrocknete_tomaten",
+    "name": "Getrocknete Tomaten",
+    "category": "Gemüse"
+  },
+  {
+    "id": "rote_rueben",
+    "name": "Rote Rüben",
+    "category": "Gemüse"
+  },
+  {
+    "id": "kartoffeln",
+    "name": "Kartoffeln",
+    "category": "Gemüse"
+  },
+  {
+    "id": "suesskartoffeln",
+    "name": "Süßkartoffeln",
+    "category": "Gemüse"
+  },
+  {
+    "id": "kraut",
+    "name": "Kraut",
+    "category": "Gemüse"
+  },
+  {
+    "id": "pak_choi",
+    "name": "Pak Choi",
+    "category": "Gemüse"
+  },
+  {
+    "id": "huhn",
+    "name": "Hühnerfleisch",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "putenfleisch",
+    "name": "Putenfleisch",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "rind",
+    "name": "Rindfleisch",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "faschiertes",
+    "name": "Faschiertes",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "schweinefleisch",
+    "name": "Schweinefleisch",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "speck",
+    "name": "Speck",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "schinken",
+    "name": "Schinken",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "salami",
+    "name": "Salami",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "wuerstel",
+    "name": "Würstel",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "prosciutto",
+    "name": "Prosciutto",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "ente",
+    "name": "Entenfleisch",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "lachs",
+    "name": "Lachs",
+    "category": "Fisch & Meeresfrüchte"
+  },
+  {
+    "id": "thunfisch",
+    "name": "Thunfisch",
+    "category": "Fisch & Meeresfrüchte"
+  },
+  {
+    "id": "garnelen",
+    "name": "Garnelen",
+    "category": "Fisch & Meeresfrüchte"
+  },
+  {
+    "id": "forelle",
+    "name": "Forelle",
+    "category": "Fisch & Meeresfrüchte"
+  },
+  {
+    "id": "kabeljau",
+    "name": "Kabeljau",
+    "category": "Fisch & Meeresfrüchte"
+  },
+  {
+    "id": "sardellen",
+    "name": "Sardellen",
+    "category": "Fisch & Meeresfrüchte"
+  },
+  {
+    "id": "muscheln",
+    "name": "Muscheln",
+    "category": "Fisch & Meeresfrüchte"
+  },
+  {
+    "id": "milch",
+    "name": "Milch",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "sahne",
+    "name": "Schlagobers",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "creme_fraiche",
+    "name": "Crème fraîche",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "schmand",
+    "name": "Sauerrahm",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "parmesan",
+    "name": "Parmesan",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "mozzarella",
+    "name": "Mozzarella",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "gouda",
+    "name": "Gouda",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "feta",
+    "name": "Feta",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "frischkaese",
+    "name": "Frischkäse",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "ricotta",
+    "name": "Ricotta",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "gorgonzola",
+    "name": "Gorgonzola",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "ei",
+    "name": "Eier",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "joghurt",
+    "name": "Naturjoghurt",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "linsen",
+    "name": "Linsen",
+    "category": "Hülsenfrüchte & Tofu"
+  },
+  {
+    "id": "kichererbsen",
+    "name": "Kichererbsen",
+    "category": "Hülsenfrüchte & Tofu"
+  },
+  {
+    "id": "kidneybohnen",
+    "name": "Kidneybohnen",
+    "category": "Hülsenfrüchte & Tofu"
+  },
+  {
+    "id": "weisse_bohnen",
+    "name": "Weiße Bohnen",
+    "category": "Hülsenfrüchte & Tofu"
+  },
+  {
+    "id": "tofu",
+    "name": "Tofu",
+    "category": "Hülsenfrüchte & Tofu"
+  },
+  {
+    "id": "edamame",
+    "name": "Edamame",
+    "category": "Hülsenfrüchte & Tofu"
+  },
+  {
+    "id": "spaghetti",
+    "name": "Spaghetti",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "penne",
+    "name": "Penne",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "tagliatelle",
+    "name": "Tagliatelle",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "fusilli",
+    "name": "Fusilli",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "farfalle",
+    "name": "Farfalle",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "rigatoni",
+    "name": "Rigatoni",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "lasagneplatten",
+    "name": "Lasagneplatten",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "gnocchi",
+    "name": "Gnocchi",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "reis",
+    "name": "Reis",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "risottoreis",
+    "name": "Risottoreis",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "couscous",
+    "name": "Couscous",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "bulgur",
+    "name": "Bulgur",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "quinoa",
+    "name": "Quinoa",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "orzo",
+    "name": "Orzo",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "nudeln",
+    "name": "Eiernudeln",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "passata",
+    "name": "Passata",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "tomatenmark",
+    "name": "Tomatenmark",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "kokosmilch",
+    "name": "Kokosmilch",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "bruehe",
+    "name": "Gemüse- oder Fleischbrühe",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "mehl",
+    "name": "Mehl",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "sem_kruemel",
+    "name": "Semmelbrösel",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "senf",
+    "name": "Senf",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "sojasauce",
+    "name": "Sojasauce",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "pesto",
+    "name": "Pesto",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "currypaste",
+    "name": "Currypaste",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "essig",
+    "name": "Essig",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "zitronensaft",
+    "name": "Zitronensaft",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "zitrone",
+    "name": "Zitrone",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "limette",
+    "name": "Limette",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "honig",
+    "name": "Honig",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "ahornsirup",
+    "name": "Ahornsirup",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "erdnussbutter",
+    "name": "Erdnussbutter",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "salsa",
+    "name": "Salsa",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "bratensaft",
+    "name": "Bratensaft",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "basilikum",
+    "name": "Basilikum",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "petersilie",
+    "name": "Petersilie",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "oregano",
+    "name": "Oregano",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "thymian",
+    "name": "Thymian",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "rosmarin",
+    "name": "Rosmarin",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "salbei",
+    "name": "Salbei",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "schnittlauch",
+    "name": "Schnittlauch",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "dill",
+    "name": "Dill",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "koriander",
+    "name": "Koriander",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "paprikapulver",
+    "name": "Paprikapulver",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "chili",
+    "name": "Chili",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "currypulver",
+    "name": "Currypulver",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "kreuzkuemmel",
+    "name": "Kreuzkümmel",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "muskat",
+    "name": "Muskat",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "zimt",
+    "name": "Zimt",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "italienische_kraeuter",
+    "name": "Italienische Kräuter",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "halloumi",
+    "name": "Halloumi",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "pfeffer",
+    "name": "Pfeffer",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "salz",
+    "name": "Salz",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "olivenoel",
+    "name": "Olivenöl",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "walnuesse",
+    "name": "Walnüsse",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "mandeln",
+    "name": "Mandeln",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "zucker",
+    "name": "Zucker",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "hefe",
+    "name": "Germ / Hefe",
+    "category": "Vorrat & Würzmittel"
+  },
+  {
+    "id": "brot",
+    "name": "Brot",
+    "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "spätzle",
+    "name": "Spätzle",
+    "category": "Nudeln, Reis & Getreide"
+  }
+]

@@ -1,0 +1,3 @@
+Die Rezeptdatensätze in data/recipes.json wurden für dieses Projekt neu und regelbasiert zusammengestellt.
+Es handelt sich um generische Rezeptideen, nicht um redaktionell getestete Rezepte oder eine lizenzierte externe Rezeptdatenbank.
+Bitte prüfe insbesondere Garzeiten und Kerntemperaturen bei Fleisch und Fisch.
