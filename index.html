@@ -27,8 +27,12 @@
     <section class="panel ingredients-panel">
       <div class="section-heading">
         <div><div class="eyebrow">SCHRITT 1</div><h2>Was hast du da?</h2></div>
-        <div class="selected-count"><strong id="selectedCount">0</strong><span>ausgewählt</span></div>
+        <div class="ingredient-heading-actions">
+          <div class="selected-count"><strong id="selectedCount">0</strong><span>ausgewählt</span></div>
+          <button id="toggleIngredients" class="button button-outline" type="button" aria-expanded="false" aria-controls="ingredientControls">Zutaten anzeigen ▾</button>
+        </div>
       </div>
+      <div id="ingredientControls" hidden>
       <div class="toolbar">
         <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Zutat suchen …" autocomplete="off"></label>
         <button id="clearSelection" class="text-button" type="button">Auswahl leeren</button>
@@ -39,13 +43,13 @@
         <span id="selectionHint">Wähle mindestens zwei Zutaten aus.</span>
         <button id="findRecipe" class="button button-primary" type="button" disabled>🎲 Zufallsrezept finden</button>
       </div>
+      </div>
     </section>
 
     <section id="resultSection" class="result-section" hidden>
-      <div class="result-kicker">DEIN ZUFALLSTREFFER</div>
+      <div class="result-navigation"><button id="anotherRecipe" class="button button-primary" type="button">↻ Nächstes Rezept</button><span class="result-kicker">DEIN ZUFALLSTREFFER</span></div>
       <article id="recipeCard" class="recipe-card"></article>
       <div class="result-actions">
-        <button id="anotherRecipe" class="button button-primary" type="button">↻ Nächstes Rezept</button>
         <button id="shareResult" class="button button-outline" type="button">▦ Zutatenlisten-QR</button>
         <button id="copyRecipeLink" class="button button-outline" type="button">↗ Rezept-Link kopieren</button>
       </div>

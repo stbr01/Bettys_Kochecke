@@ -6,8 +6,9 @@ Statische Website für Cloudflare Pages. Keine Datenbank, kein Backend und keine
 - Zutatenbibliothek mit Kategorien und Suche
 - 500 vorbereitete Rezeptdatensätze
 - Auswahl wird lokal gespeichert und in einen persönlichen URL-Link codiert
-- QR-Code zum Teilen / Wiederaufrufen
-- Zufallsauswahl aus Rezepten, die mindestens zwei ausgewählte Zutaten enthalten
+- Wiederverwendbarer Zutatenlisten-QR: Jeder Scan zieht automatisch ein neues passendes Zufallsrezept
+- Direkter Link zum jeweils angezeigten Rezept kann separat kopiert werden
+- Strikte Zufallsauswahl: Alle benötigten Rezeptzutaten müssen ausgewählt sein (Salz, Pfeffer und Öl gelten als Grundzutaten)
 - Pasta-Schwerpunkt; keine Suppen und Eintöpfe
 
 ## Lokal testen
@@ -34,4 +35,4 @@ Bei jedem Push auf den verbundenen Branch veröffentlicht Cloudflare Pages die �
 Die 500 Einträge sind ein erster kuratierter, regelbasiert zusammengestellter Rezeptbestand. Die Rezepte sind Rezeptideen mit generischen Zubereitungsschritten und sollten vor dem Kochen hinsichtlich Garzeiten, Würzung und Mengen geprüft und bei Bedarf redaktionell verbessert werden. Sie sind keine geprüfte redaktionelle Kochbuchsammlung.
 
 ## Link- und QR-Code-Verhalten
-Die ausgewählten Zutaten-IDs werden als `?i=id1,id2,...` in der URL gespeichert. Es gibt kein Benutzerkonto und keine zentrale Synchronisierung. Wer den Link besitzt, kann dieselbe Auswahl öffnen. Die lokale Auswahl wird zusätzlich im Browser gespeichert.
+Die ausgewählten Zutaten-IDs werden als `?i=id1,id2,...` in der URL gespeichert. Der QR-Code verwendet zusätzlich `&draw=1`; beim Öffnen wird automatisch ein zufälliges Rezept erzeugt, dessen vollständige Zutatenliste in der Auswahl enthalten ist. Nach der Ziehung wird die Browser-Adresse zu einem direkten Rezeptlink (`?i=...&recipe=rNNNN`). Es gibt kein Benutzerkonto und keine zentrale Synchronisierung. Wer den Link besitzt, kann dieselbe Auswahl öffnen. Die lokale Auswahl wird zusätzlich im Browser gespeichert.

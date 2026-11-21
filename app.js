@@ -15,6 +15,7 @@ async function init(){
       try { JSON.parse(localStorage.getItem("recipe-generator-selection")||"[]").forEach(id=>{if(state.ingredients.some(x=>x.id===id))state.selected.add(id)}); } catch {}
     }
     renderCategories(); renderIngredients(); updateSelection();
+    $("toggleIngredients").addEventListener("click",()=>setIngredientsExpanded($("ingredientControls").hidden));
     $("search").addEventListener("input",renderIngredients);
     $("clearSelection").addEventListener("click",()=>{state.selected.clear();updateSelection({clearRecipe:true});renderIngredients();});
     $("findRecipe").addEventListener("click",showRandomRecipe);
@@ -37,12 +38,17 @@ async function init(){
         recipe.matched=[...recipe.ingredientIds];
         renderRecipe(recipe);
         $("resultSection").hidden=false;
-        $("resultSection").scrollIntoView({behavior:"smooth",block:"start"});
+        scrollToRecipe();
       } else {
         showNoMatch("Dieses Rezept passt nicht vollständig zur gespeicherten Zutatenliste. Bitte ziehe ein neues Zufallsrezept.");
       }
     }
   }catch(err){$("ingredientGrid").innerHTML=`<div class="empty-state">${escapeHtml(err.message)} Bitte lade die Seite neu.</div>`;}
+}
+function setIngredientsExpanded(expanded){
+  $("ingredientControls").hidden=!expanded;
+  $("toggleIngredients").setAttribute("aria-expanded",String(expanded));
+  $("toggleIngredients").textContent=expanded?"Zutaten einklappen ▴":"Zutaten anzeigen ▾";
 }
 function renderCategories(){
   $("categoryTabs").innerHTML = categoryOrder.map(cat=>`<button class="category-tab ${state.activeCategory===cat?"active":""}" data-cat="${cat}">${cat==="Alle"?"Alle Zutaten":(categoryEmoji[cat]||"")+" "+cat}</button>`).join("");
@@ -78,11 +84,15 @@ function setRecipeUrl(recipeId){
   p.set("recipe",recipeId);
   history.replaceState(null,"",location.pathname+"?"+p.toString());
 }
+function scrollToRecipe(){
+  // Show the navigation and recipe immediately, even when coming from a QR scan.
+  requestAnimationFrame(()=>$("resultSection").scrollIntoView({behavior:"instant",block:"start"}));
+}
 function showNoMatch(message){
   $("resultSection").hidden=false;
   $("recipeCard").innerHTML=`<div class="empty-state">${escapeHtml(message)}</div>`;
   $("matchNote").textContent="";
-  $("resultSection").scrollIntoView({behavior:"smooth",block:"start"});
+  scrollToRecipe();
 }
 function showRandomRecipe(){
   if(state.selected.size<2)return;
@@ -106,7 +116,7 @@ function showRandomRecipe(){
   renderRecipe(chosen);
   setRecipeUrl(chosen.id);
   $("resultSection").hidden=false;
-  $("resultSection").scrollIntoView({behavior:"smooth",block:"start"});
+  scrollToRecipe();
 }
 function renderRecipe(r){
   const names=new Map(state.ingredients.map(x=>[x.id,x.name]));
