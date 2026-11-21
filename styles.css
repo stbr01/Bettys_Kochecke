@@ -35,3 +35,14 @@
 .matching-summary strong{color:var(--green);font-size:16px}
 @media(max-width:700px){.matching-summary{font-size:10px}}
 @media(max-width:400px){.section-heading{flex-wrap:wrap}.ingredient-heading-actions{justify-content:flex-start}.matching-summary{margin-left:5px}}
+
+/* v10 – Bettys ursprüngliches Comic-Logo; mobilfreundlich und ohne Überlagerung */
+.brand-icon{width:46px;height:35px;object-fit:contain;flex:none;border-radius:5px}
+.hero{max-width:920px}
+.hero-logo{display:block;width:min(100%,760px);height:auto;margin:0 auto 28px;object-fit:contain;border-radius:16px}
+@media(max-width:700px){
+ .brand{font-size:15px;gap:7px}
+ .brand-icon{width:36px;height:28px}
+ .topbar #shareTop{font-size:10px;padding:9px 10px}
+ .hero-logo{margin-bottom:22px;border-radius:12px}
+}
