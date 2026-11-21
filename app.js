@@ -1,7 +1,9 @@
 const state = { ingredients: [], recipes: [], selected: new Set(), activeCategory: "Alle", lastRecipeIds: [] };
 const $ = (id) => document.getElementById(id);
-const categoryOrder = ["Alle","Gemüse","Fleisch & Geflügel","Fisch & Meeresfrüchte","Milchprodukte & Eier","Hülsenfrüchte & Tofu","Nudeln, Reis & Getreide","Vorrat & Würzmittel","Kräuter & Gewürze","Obst"];
-const categoryEmoji = {"Gemüse":"🥕","Fleisch & Geflügel":"🍗","Fisch & Meeresfrüchte":"🐟","Milchprodukte & Eier":"🧀","Hülsenfrüchte & Tofu":"🫘","Nudeln, Reis & Getreide":"🍝","Vorrat & Würzmittel":"🫙","Kräuter & Gewürze":"🌿","Obst":"🍍"};
+// Nine fixed categories (plus the "Alle Zutaten" filter); the JSON array's order
+// is deliberately not changed, since QR bit positions depend on it.
+const categoryOrder = ["Alle","Gemüse & Salat","Fleisch & Wurst","Fisch & Meeresfrüchte","Beilagen & Getreide","Milchprodukte & Eier","Hülsenfrüchte & Tofu","Gewürze & Kräuter","Vorrat & Saucen","Obst & Nüsse"];
+const categoryEmoji = {"Gemüse & Salat":"🥕","Fleisch & Wurst":"🍗","Fisch & Meeresfrüchte":"🐟","Beilagen & Getreide":"🍝","Milchprodukte & Eier":"🧀","Hülsenfrüchte & Tofu":"🫘","Gewürze & Kräuter":"🌿","Vorrat & Saucen":"🫙","Obst & Nüsse":"🍋"};
 
 async function init(){
   try{
@@ -18,7 +20,14 @@ async function init(){
     }
     renderCategories(); renderIngredients(); updateSelection();
     $("toggleIngredients").addEventListener("click",()=>setIngredientsExpanded($("ingredientControls").hidden));
-    $("search").addEventListener("input",renderIngredients);
+    // Searching always covers the complete ingredient list, not just the last tab.
+    $("search").addEventListener("input",()=>{
+      if($("search").value.trim() && state.activeCategory!=="Alle"){
+        state.activeCategory="Alle";
+        renderCategories();
+      }
+      renderIngredients();
+    });
     $("clearSelection").addEventListener("click",()=>{state.selected.clear();updateSelection({clearRecipe:true});renderIngredients();});
     $("findRecipe").addEventListener("click",showRandomRecipe);
     $("anotherRecipe").addEventListener("click",showRandomRecipe);
@@ -56,14 +65,44 @@ function setIngredientsExpanded(expanded){
   $("toggleIngredients").textContent=expanded?"Zutaten einklappen ▴":"Zutaten anzeigen ▾";
 }
 function renderCategories(){
-  $("categoryTabs").innerHTML = categoryOrder.map(cat=>`<button class="category-tab ${state.activeCategory===cat?"active":""}" data-cat="${cat}">${cat==="Alle"?"Alle Zutaten":(categoryEmoji[cat]||"")+" "+cat}</button>`).join("");
-  $("categoryTabs").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{state.activeCategory=b.dataset.cat;renderCategories();renderIngredients()}));
+  $("categoryTabs").innerHTML = categoryOrder.map(cat=>{
+    const count=cat==="Alle"?state.ingredients.length:state.ingredients.filter(x=>x.category===cat).length;
+    return `<button type="button" class="category-tab ${state.activeCategory===cat?"active":""}" data-cat="${escapeHtml(cat)}" aria-pressed="${state.activeCategory===cat}">${cat==="Alle"?"Alle Zutaten":(categoryEmoji[cat]||"")+" "+escapeHtml(cat)} <span class="category-tab-count">${count}</span></button>`;
+  }).join("");
+  $("categoryTabs").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    state.activeCategory=b.dataset.cat;
+    renderCategories();
+    renderIngredients();
+  }));
 }
 function renderIngredients(){
   const q=$("search").value.trim().toLocaleLowerCase("de");
-  const items=state.ingredients.filter(x=>(state.activeCategory==="Alle"||x.category===state.activeCategory)&&(!q||x.name.toLocaleLowerCase("de").includes(q)));
-  $("ingredientGrid").innerHTML=items.length?items.map(x=>`<label class="ingredient ${state.selected.has(x.id)?"selected":""}"><input type="checkbox" value="${x.id}" ${state.selected.has(x.id)?"checked":""}><span class="check">${state.selected.has(x.id)?"✓":""}</span><span class="ingredient-name">${escapeHtml(x.name)}</span></label>`).join(""):`<div class="empty-state">Keine Zutaten gefunden.</div>`;
-  $("ingredientGrid").querySelectorAll("input").forEach(input=>input.addEventListener("change",()=>{input.checked?state.selected.add(input.value):state.selected.delete(input.value);persistSelection();updateSelection({clearRecipe:true});renderIngredients();}));
+  const visibleCategories=state.activeCategory==="Alle"?categoryOrder.slice(1):[state.activeCategory];
+  const groups=visibleCategories.map(cat=>{
+    // Sort only for presentation. Never reorder the source array: compact QR
+    // codes encode selections by the ingredient's original array index.
+    const items=state.ingredients
+      .filter(x=>x.category===cat && (!q||x.name.toLocaleLowerCase("de").includes(q)))
+      .sort((a,b)=>a.name.localeCompare(b.name,"de",{sensitivity:"base"}));
+    if(!items.length)return "";
+    const selectedCount=items.filter(x=>state.selected.has(x.id)).length;
+    const tiles=items.map(x=>`<label class="ingredient ${state.selected.has(x.id)?"selected":""}"><input type="checkbox" value="${escapeHtml(x.id)}" ${state.selected.has(x.id)?"checked":""}><span class="check">${state.selected.has(x.id)?"✓":""}</span><span class="ingredient-name">${escapeHtml(x.name)}</span></label>`).join("");
+    const headingId="ingredient-category-"+categoryOrder.indexOf(cat);
+    return `<section class="ingredient-group" aria-labelledby="${headingId}">
+      <div class="ingredient-group-heading">
+        <h3 id="${headingId}"><span aria-hidden="true">${categoryEmoji[cat]||""}</span> ${escapeHtml(cat)}</h3>
+        <span class="ingredient-group-count">${items.length} Zutaten · ${selectedCount} ausgewählt</span>
+      </div>
+      <div class="ingredient-grid">${tiles}</div>
+    </section>`;
+  }).filter(Boolean);
+  $("ingredientGrid").innerHTML=groups.length?groups.join(""):`<div class="empty-state">Keine Zutaten gefunden.</div>`;
+  $("ingredientGrid").querySelectorAll("input").forEach(input=>input.addEventListener("change",()=>{
+    input.checked?state.selected.add(input.value):state.selected.delete(input.value);
+    persistSelection();
+    updateSelection({clearRecipe:true});
+    renderIngredients();
+  }));
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 // A compact bitset; positions of existing ingredients must never change.

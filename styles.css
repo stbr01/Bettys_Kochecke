@@ -18,3 +18,14 @@
 .recipe-source{margin-top:22px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.6}
 .recipe-source a{color:var(--green-dark);font-weight:700;text-decoration:underline;text-underline-offset:2px}
 .recipe-source p{font-size:11px;margin:6px 0 0;line-height:1.6}
+
+/* v8: Neun klar getrennte, alphabetisch sortierte Zutatengruppen */
+.ingredient-groups{display:flex;flex-direction:column;gap:24px;margin-top:5px}
+.ingredient-group{min-width:0}
+.ingredient-group+.ingredient-group{border-top:1px solid var(--line);padding-top:20px}
+.ingredient-group-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px 12px;margin-bottom:12px}
+.ingredient-group-heading h3{margin:0;font-size:16px;letter-spacing:-.3px;color:var(--ink);font-weight:700}
+.ingredient-group-count{color:var(--muted);font-size:11px;white-space:nowrap}
+.category-tab-count{display:inline-flex;align-items:center;justify-content:center;margin-left:4px;border-radius:9px;padding:2px 5px;background:#f3f5ef;color:var(--muted);font-size:10px}
+.category-tab.active .category-tab-count{color:var(--green-dark);background:#eff6ed}
+@media(max-width:700px){.ingredient-groups{gap:20px}.ingredient-group+.ingredient-group{padding-top:16px}.ingredient-group-heading h3{font-size:14px}.ingredient-group-count{font-size:10px}}

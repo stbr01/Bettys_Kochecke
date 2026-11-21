@@ -1,49 +1,20 @@
-# Bettys Kochecke – Rezeptgenerator (Qualitätsausgabe v6)
+# Bettys Kochecke – v7
 
-Statische Website für Cloudflare Workers oder Cloudflare Pages. Keine Datenbank, kein Benutzerkonto und keine KI-API notwendig. QR-Erstellung im Browser per qrcodejs-CDN.
+75 sorgfältiger formulierte Rezepte (zuvor 34), davon 29 in „Pasta & Nudelgerichte“. 165 Zutaten in der auswählbaren Bibliothek.
 
-## Was neu ist
+## Git Extensions Update
 
-- **34 einzeln ausgearbeitete Alltagsgerichte** aus einer Recherche bei Chefkoch, Einfach Kochen und BBC Good Food, davon **18 Pasta- und Nudelgerichte**. Keine Suppen oder Eintöpfe.
-- Jede Rezeptkarte verlinkt das **bewertete Inspirationsrezept** mit Bewertungsstand vom 21.11.2026. Die dortigen Sterne beziehen sich ausdrücklich **nicht** auf unsere vereinfachte Rezeptfassung.
-- Eigene Mengen für **zwei Portionen** und vier konkrete Arbeitsschritte pro Gericht. Diese Fassungen sind noch **nicht praktisch probegekocht**.
-- Zutatenbibliothek von 128 auf **149** ergänzt. Alte Zutaten-IDs und deren Reihenfolge bleiben erhalten.
-- Normale Pastasorten (z.B. Penne, Fusilli, Spaghetti) dürfen gegenseitig ersetzt werden. Alle weiteren Rezeptzutaten müssen exakt ausgewählt sein.
-- Zutatenliste standardmäßig eingeklappt. QR-Link führt direkt zum Zufallsrezept, „Nächstes Rezept“ bleibt beim Scrollen sichtbar.
-- Alte kompakte QR-Codes (128 Zutaten/16 Byte) werden auch mit 149 Zutaten akzeptiert.
+Das Paket `Bettys-Kochecke-v7-Update.zip` enthält nur die zu ändernden Dateien: `data/recipes.json`, `data/ingredients.json` und `index.html`. In deine lokale Projektstruktur kopieren und Dateien überschreiben, danach Commit + Push. Die Dateien `app.js`, `styles.css` und QR-Code-Logik werden nicht verändert.
 
-## Neue Dateien in dein bestehendes Git-Projekt kopieren
+## Auswahl & Hinweise
 
-Bei Aktualisierung einer vorhandenen Installation diese **fünf Dateien** ersetzen:
+Originalquellen und Ratings sind in `RECHERCHE-UND-QUELLEN.md` aufgelistet. Die Rezepte sind vereinfachte, selbstständig formulierte Alltagsfassungen für zwei Personen und nicht probegekocht. Quellenbewertungen gelten nur für die dort veröffentlichten Rezepte. Ein exaktes Top-10-Prozent-Perzentil kann nicht verifiziert werden. Keine Suppen/Eintöpfe. Zutaten vollständig benötigt außer den vordefinierten Grundzutaten.
 
-1. `app.js`
-2. `index.html`
-3. `styles.css`
-4. `data/recipes.json`
-5. `data/ingredients.json`
+Hinweis zu QR-Codes: Die neuen Zutaten werden angehängt; eine formelle QR-Abwärtskompatibilität für Vorabversionen wird nicht zugesichert. Neue QR-Codes nach dem Deployment erzeugen.
 
-Optional zusätzlich die Dokumentation übernehmen. Anschließend in Git Extensions Änderungen kontrollieren, committen und auf GitHub pushen; Cloudflare veröffentlicht den neuen Stand über die bestehende Verbindung.
-
-**Wichtig:** Die Qualitätssammlung ersetzt alle 500 zuvor automatisch generierten Rezepte durch 34 redaktionell überarbeitete. Dadurch kann es bei kleinen Zutatenauswahlen seltener einen Treffer geben. Frühere direkte Rezeptlinks mit alten Rezept-IDs erzeugen automatisch einen neuen passenden Vorschlag, soweit eine Zutatenliste vorhanden ist.
-
-## Lokal testen
-
-Im Projektordner:
-
-```bash
-python -m http.server 8000
-```
-
-Dann `http://localhost:8000/` öffnen. Das direkte Öffnen der `index.html` per `file://` kann JSON-Fetch blockieren.
-
-## Auswahlkriterien und Quellen
-
-Siehe `RECHERCHE-UND-QUELLEN.md`. Eine mathematisch nachgewiesene Auswahl aus den oberen zehn Prozent **aller** Rezepte der jeweiligen Portale ist aufgrund fehlender vollständiger Bewertungsverteilungen nicht möglich. Die Auswahl verwendet eine dokumentierte strenge praktische Bewertungsgrenze.
-
-## Technische Hinweise
-
-- Zutaten werden in `localStorage` und als URL-Bitmaske (`?z=...`) gespeichert.
-- Der QR-Link verwendet `?z=...&draw=1`: Jeder Aufruf zieht ein neues passendes Rezept.
-- Die Rezept-Zufallsauswahl prüft strikt alle Pflichtzutaten und unterstützt nur klar definierte Pastasorten als gleichwertigen Austausch.
-- `?z=...&recipe=qNNN` ist der Direktlink zu einem ausgewählten Rezept.
-- Neue Zutaten werden immer **ans Ende** der `ingredients.json` angehängt – Reihenfolge nie ändern, sonst verlieren bestehende QR-Codes ihre Bedeutung.
+## Version 8 – Zutatenübersicht
+- Die 165 Zutaten sind nun in neun praxisnahen Kategorien organisiert.
+- Der Reiter „Alle Zutaten“ zeigt Zutaten in Gruppen mit Überschriften, Anzahl und alphabetischer Sortierung.
+- Jeder Reiter filtert eine Gruppe; die Suche wechselt automatisch auf „Alle Zutaten“ und findet gruppenübergreifend.
+- Die Zutaten bleiben standardmäßig eingeklappt. Rezepte, Auswahl, QR-Code und Zufallsfunktion bleiben unverändert.
+- **Wichtig:** Die Reihenfolge der Zutaten im JSON-Array bleibt unverändert. Nur `category`-Werte wurden angepasst, damit der QR-Bitcode weiterhin dieselben IDs referenziert.
