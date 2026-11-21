@@ -1,1 +1,1 @@
-Version 4: QR-Codes mit kompaktem Zutaten-Bitset (?z=1...&draw=1), 280 x 280 px, Schwarz/Weiß. Alte Links mit ?i= bleiben lesbar. In Git Extensions nur app.js und styles.css ersetzen, dann Commit und Push. Bereits erstellte QR-Codes bleiben mit alter URL, daher bei geänderter Cloudflare-Adresse neu erzeugen.
+Version 5: QR-Link verwendet Base64url-Bitmaske (22 Zeichen bei 128 Zutaten). QR-Fehlerkorrektur L und 320x320 Pixel. Alte Hex-Links aus Version 4 bleiben lesbar. Nur app.js muss ersetzt werden.

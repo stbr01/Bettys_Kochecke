@@ -10,7 +10,9 @@ async function init(){
     state.ingredients = await i.json(); state.recipes = await r.json();
     const params = new URLSearchParams(location.search);
     const ids = params.get("i");
-    if(ids) ids.split(",").forEach(id=>{if(state.ingredients.some(x=>x.id===id)) state.selected.add(id)});
+    const packed = params.get("z");
+    if(packed !== null) decodeSelection(packed).forEach(id=>state.selected.add(id));
+    else if(ids !== null) ids.split(",").forEach(id=>{if(state.ingredients.some(x=>x.id===id)) state.selected.add(id)});
     else {
       try { JSON.parse(localStorage.getItem("recipe-generator-selection")||"[]").forEach(id=>{if(state.ingredients.some(x=>x.id===id))state.selected.add(id)}); } catch {}
     }
@@ -26,7 +28,7 @@ async function init(){
     $("copyLink").addEventListener("click",copyLink);
     $("shareDialog").addEventListener("click",e=>{if(e.target===$("shareDialog")) $("shareDialog").close()});
 
-    // A QR/list link uses ?i=...&draw=1: every scan draws a fresh recipe
+    // A QR/list link uses ?z=...&draw=1: every scan draws a fresh recipe
     // from the saved ingredient selection instead of pointing to one fixed recipe.
     const recipeId = params.get("recipe");
     if(params.get("draw")==="1"){
@@ -61,6 +63,34 @@ function renderIngredients(){
   $("ingredientGrid").querySelectorAll("input").forEach(input=>input.addEventListener("change",()=>{input.checked?state.selected.add(input.value):state.selected.delete(input.value);persistSelection();updateSelection({clearRecipe:true});renderIngredients();}));
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+// 128 ingredients fit into 16 bytes / 22 Base64url characters.
+// The bit positions are tied to the stable ingredients.json order.
+function encodeSelection(){
+  const bytes=new Uint8Array(Math.ceil(state.ingredients.length/8));
+  state.ingredients.forEach((item,index)=>{if(state.selected.has(item.id))bytes[index>>3]|=1<<(index&7)});
+  let binary="";bytes.forEach(byte=>binary+=String.fromCharCode(byte));
+  return btoa(binary).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,"");
+}
+function decodeSelection(value){
+  try{
+    let bytes;
+    // Backward compatibility with v4 hexadecimal links.
+    if(/^1(?:[0-9a-f]{2})+$/i.test(value)){
+      const hex=value.slice(1);bytes=[];
+      for(let j=0;j<hex.length;j+=2)bytes.push(parseInt(hex.slice(j,j+2),16));
+    }else if(/^[A-Za-z0-9_-]+$/.test(value)){
+      const binary=atob(value.replace(/-/g,"+").replace(/_/g,"/").padEnd(Math.ceil(value.length/4)*4,"="));
+      bytes=Array.from(binary,c=>c.charCodeAt(0));
+    }else return [];
+    if(bytes.length!==Math.ceil(state.ingredients.length/8))return [];
+    return state.ingredients.filter((item,index)=>!!(bytes[index>>3]&(1<<(index&7)))).map(item=>item.id);
+  }catch{return [];}
+}
+function setSelectionParams(params){
+  params.delete("i");
+  if(state.selected.size)params.set("z",encodeSelection());
+  else params.delete("z");
+}
 function persistSelection(){localStorage.setItem("recipe-generator-selection",JSON.stringify([...state.selected]));}
 function updateSelection(options={}){
   $("selectedCount").textContent=state.selected.size;
@@ -70,7 +100,7 @@ function updateSelection(options={}){
     :"Es erscheinen nur Rezepte, deren benötigte Zutaten alle ausgewählt sind.";
   persistSelection();
   const p=new URLSearchParams(location.search);
-  if(state.selected.size)p.set("i",[...state.selected].join(","));else p.delete("i");
+  setSelectionParams(p);
   if(options.clearRecipe){
     p.delete("recipe");p.delete("draw");
     $("resultSection").hidden=true;
@@ -80,7 +110,7 @@ function updateSelection(options={}){
 }
 function setRecipeUrl(recipeId){
   const p=new URLSearchParams();
-  if(state.selected.size)p.set("i",[...state.selected].join(","));
+  setSelectionParams(p);
   p.set("recipe",recipeId);
   history.replaceState(null,"",location.pathname+"?"+p.toString());
 }
@@ -101,7 +131,7 @@ function showRandomRecipe(){
   const matching=state.recipes
     .filter(r=>Array.isArray(r.ingredientIds) && r.ingredientIds.length>0 && r.ingredientIds.every(id=>state.selected.has(id)));
   if(!matching.length){
-    const p=new URLSearchParams();p.set("i",[...state.selected].join(","));
+    const p=new URLSearchParams();setSelectionParams(p);
     history.replaceState(null,"",location.pathname+"?"+p.toString());
     showNoMatch("Leider gibt es in der aktuellen Rezeptdatenbank kein Rezept, dessen komplette Zutatenliste in deiner Auswahl enthalten ist. Wähle weitere Zutaten aus oder ergänze deine Auswahl.");
     return;
@@ -134,7 +164,7 @@ function renderRecipe(r){
 }
 function currentShareUrl(){
   const url=new URL(location.href);url.search="";url.hash="";
-  if(state.selected.size)url.searchParams.set("i",[...state.selected].join(","));
+  setSelectionParams(url.searchParams);
   // This is deliberately a reusable ingredient-list QR, not a QR for one fixed recipe.
   // Each scan opens the same selection and draws a fresh random matching recipe.
   url.searchParams.set("draw","1");
@@ -144,7 +174,7 @@ function openShare(){
   if(!state.selected.size){alert("Bitte wähle zuerst Zutaten aus.");return;}
   const url=currentShareUrl();$("shareUrl").value=url;$("copyStatus").textContent="";
   const qr=$("qrcode");qr.innerHTML="";
-  if(window.QRCode){new QRCode(qr,{text:url,width:170,height:170,colorDark:"#203b2b",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});}
+  if(window.QRCode){new QRCode(qr,{text:url,width:320,height:320,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.L});}
   else qr.innerHTML='<div class="qr-placeholder">QR-Code-Bibliothek konnte nicht geladen werden. Du kannst den Link trotzdem kopieren.</div>';
   $("shareDialog").showModal();
 }
