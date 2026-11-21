@@ -13,14 +13,14 @@
 <body>
   <header class="topbar">
     <a class="brand" href="./" aria-label="Startseite"><span class="brand-mark">✳</span><span>was kochen wir<span class="brand-dot">.</span></span></a>
-    <button id="shareTop" class="button button-quiet" type="button">↗ Teilen</button>
+    <button id="shareTop" class="button button-quiet" type="button">▦ Zutatenlisten-QR</button>
   </header>
 
   <main class="shell">
     <section class="hero">
       <div class="eyebrow">DEIN PERSÖNLICHER REZEPTFINDER</div>
       <h1>Was kochen wir <em>heute?</em></h1>
-      <p>Wähle aus, was du gerne verwenden möchtest. Wir finden ein passendes Rezept – auch wenn nicht alle ausgewählten Zutaten hineingehören.</p>
+      <p>Wähle deine Zutaten aus. Es werden ausschließlich Rezepte vorgeschlagen, für die alle benötigten Zutaten in deiner Auswahl enthalten sind.</p>
       <div class="hero-meta"><span>✦ 500 Rezeptideen</span><span>♡ Ohne Suppen & Eintöpfe</span><span>↗ Mit Pasta-Schwerpunkt</span></div>
     </section>
 
@@ -46,25 +46,26 @@
       <article id="recipeCard" class="recipe-card"></article>
       <div class="result-actions">
         <button id="anotherRecipe" class="button button-primary" type="button">↻ Nächstes Rezept</button>
-        <button id="shareResult" class="button button-outline" type="button">QR-Code & Link</button>
+        <button id="shareResult" class="button button-outline" type="button">▦ Zutatenlisten-QR</button>
+        <button id="copyRecipeLink" class="button button-outline" type="button">↗ Rezept-Link kopieren</button>
       </div>
       <p id="matchNote" class="match-note"></p>
     </section>
 
     <section class="howto">
       <div class="howto-icon">✳</div>
-      <div><strong>Deine Auswahl bleibt erhalten.</strong><p>Mit „Link & QR-Code“ kannst du deine Zutatenliste speichern, am Handy öffnen oder mit anderen teilen.</p></div>
+      <div><strong>Deine Auswahl bleibt erhalten.</strong><p>Der Zutatenlisten-QR-Code bleibt wiederverwendbar: Jeder Scan zieht ein neues Rezept, das vollständig zu deiner Auswahl passt.</p></div>
     </section>
     <footer>Ein kleiner Helfer für die tägliche Frage: Was kochen wir heute?</footer>
   </main>
 
   <dialog id="shareDialog" class="share-dialog">
     <form method="dialog"><button class="dialog-close" aria-label="Schließen">×</button></form>
-    <div class="eyebrow">DEINE ZUTATENLISTE</div>
-    <h2>Link speichern & teilen</h2>
-    <p>Dieser Link enthält deine ausgewählten Zutaten. Du kannst ihn als Lesezeichen speichern oder den QR-Code scannen.</p>
+    <div class="eyebrow">DEIN WIEDERVERWENDBARER ZUTATENLISTEN-CODE</div>
+    <h2>Zutatenliste als QR-Code</h2>
+    <p>Der QR-Code speichert deine Zutaten-Auswahl – nicht ein bestimmtes Rezept. Bei jedem Scan öffnet sich der Rezeptgenerator mit dieser Liste und zieht automatisch ein neues passendes Zufallsrezept.</p>
     <div id="qrcode" class="qr-wrap"><div class="qr-placeholder">QR-Code wird erstellt …</div></div>
-    <label class="link-label" for="shareUrl">Dein persönlicher Link</label>
+    <label class="link-label" for="shareUrl">Dein persönlicher Zutatenlisten-Link</label>
     <div class="copy-row"><input id="shareUrl" readonly><button id="copyLink" class="button button-primary" type="button">Kopieren</button></div>
     <div id="copyStatus" class="copy-status" aria-live="polite"></div>
   </dialog>
