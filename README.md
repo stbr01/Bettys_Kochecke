@@ -1,20 +1,44 @@
-# Bettys Kochecke – v7
+# Bettys Kochecke – Version 9 (Vorabversion)
 
-75 sorgfältiger formulierte Rezepte (zuvor 34), davon 29 in „Pasta & Nudelgerichte“. 165 Zutaten in der auswählbaren Bibliothek.
+## Ergebnis
 
-## Git Extensions Update
+- **196 individuell ausgearbeitete Rezepte**: 75 aus Version 8, dazu 121 neue Alltagsrezepte.
+- **162 auswählbare Zutaten** in den unveränderten neun Kategorien (vorher 165).
+- Doppelte Zutaten-IDs vereinheitlicht:
+  - `spinat_tk` → `spinat` (Anzeige: **Spinat (frisch oder TK)**)
+  - `sauerrahm` → `schmand` (Anzeige: **Sauerrahm**)
+  - `kohl` → `kraut` (Anzeige: **Weißkraut / Weißkohl**)
+- Alte lokal gespeicherte Auswahl wird beim Laden automatisch anhand dieser drei IDs zusammengeführt. Falls beide Varianten ausgewählt waren, zählt die zusammengelegte Zutat nur einmal.
+- **Bestehende Rezept-IDs unverändert.** Alle 75 vorhandenen Rezepte referenzieren weiterhin vollständige und gültige Zutatenlisten.
+- **Strenges Matching** bleibt bestehen: Nur Zutaten aus der aktivierten Auswahl, außer den explizit erlaubten Grundzutaten Salz, Pfeffer und Öl. Normale Pastasorten sind weiterhin tauschbar.
+- Zusätzlich kann eine **ausgewählte frische Zitrone** die Zutat **Zitronensaft** abdecken, nicht umgekehrt (Schale oder Scheiben erfordern eine frische Zitrone).
+- Der Zutatenbereich bleibt standardmäßig zugeklappt, und der aktuelle **Trefferzähler** ist schon im zugeklappten Zustand sichtbar.
 
-Das Paket `Bettys-Kochecke-v7-Update.zip` enthält nur die zu ändernden Dateien: `data/recipes.json`, `data/ingredients.json` und `index.html`. In deine lokale Projektstruktur kopieren und Dateien überschreiben, danach Commit + Push. Die Dateien `app.js`, `styles.css` und QR-Code-Logik werden nicht verändert.
+## Wichtiger Hinweis zu QR-Codes
 
-## Auswahl & Hinweise
+**Neue QR-Codes erstellen.** Die Reihenfolge/Anzahl der Zutaten wurde geändert. Auf Wunsch wurde auf QR-Abwärtskompatibilität verzichtet. Neue Codes verwenden ausdrücklich das Format `?z=v9.<codierte-zutaten>&draw=1`. Alte Vorab-Codes werden absichtlich nicht mit falschen Zutaten entschlüsselt. Ein solcher Link zeigt eine Meldung an.
 
-Originalquellen und Ratings sind in `RECHERCHE-UND-QUELLEN.md` aufgelistet. Die Rezepte sind vereinfachte, selbstständig formulierte Alltagsfassungen für zwei Personen und nicht probegekocht. Quellenbewertungen gelten nur für die dort veröffentlichten Rezepte. Ein exaktes Top-10-Prozent-Perzentil kann nicht verifiziert werden. Keine Suppen/Eintöpfe. Zutaten vollständig benötigt außer den vordefinierten Grundzutaten.
+**Lokal gespeicherte Zutaten bleiben dagegen erhalten** (einschließlich der drei zusammengeführten IDs), sofern die Website ohne alten QR-Link geöffnet wird.
 
-Hinweis zu QR-Codes: Die neuen Zutaten werden angehängt; eine formelle QR-Abwärtskompatibilität für Vorabversionen wird nicht zugesichert. Neue QR-Codes nach dem Deployment erzeugen.
+## Für Git Extensions: Dateien ersetzen
 
-## Version 8 – Zutatenübersicht
-- Die 165 Zutaten sind nun in neun praxisnahen Kategorien organisiert.
-- Der Reiter „Alle Zutaten“ zeigt Zutaten in Gruppen mit Überschriften, Anzahl und alphabetischer Sortierung.
-- Jeder Reiter filtert eine Gruppe; die Suche wechselt automatisch auf „Alle Zutaten“ und findet gruppenübergreifend.
-- Die Zutaten bleiben standardmäßig eingeklappt. Rezepte, Auswahl, QR-Code und Zufallsfunktion bleiben unverändert.
-- **Wichtig:** Die Reihenfolge der Zutaten im JSON-Array bleibt unverändert. Nur `category`-Werte wurden angepasst, damit der QR-Bitcode weiterhin dieselben IDs referenziert.
+1. Die Datei `Bettys-Kochecke-v9-Update.zip` entpacken.
+2. Folgende Dateien in deinem bestehenden Projekt ersetzen:
+   - `app.js`
+   - `index.html`
+   - `styles.css`
+   - `data/ingredients.json`
+   - `data/recipes.json`
+3. In Git Extensions die Änderungen ansehen, **Commit** und dann **Push** ausführen.
+4. Cloudflare neu laden (falls nötig mit `Strg+F5`).
+5. Zutaten prüfen, ein zufälliges Rezept ziehen und **einen neuen QR-Code** erzeugen.
+
+Die Dateien `RECHERCHE-UND-QUELLEN.md` und `TESTBERICHT.md` sind nur zur Dokumentation und müssen nicht mit hochgeladen werden.
+
+## Datenqualität und Herkunft
+
+Die **121 neu hinzugefügten Rezepte** sind selbstständig formulierte Alltagsfassungen mit Zutatenmengen für zwei Portionen und mindestens drei eigenen Zubereitungsschritten. Die Rezepte wurden fachlich auf offensichtliche Plausibilität geprüft, aber **nicht gekocht, verkostet oder von Nutzern bewertet**. Bei wenigen ist ein externes Inspirationsrezept verlinkt; bei den anderen handelt es sich um eigene Vorschläge. Bestehende 75 Rezepte behalten die früheren Quellenangaben und Originalbewertungen. Solche Bewertungen gelten ausschließlich für die verlinkten Originale.
+
+Die Qualitätskriterien wurden gegenüber v7 gelockert: Wichtig sind einfache Zubereitung, plausible Zutaten, vernünftige Menge und Zeit, sowie kulinarisch sinnvolle Kombinationen. Kein globaler „Top-10-%“-Anspruch. Keine Suppen/Eintöpfe. Bei Unsicherheiten ist das Rezept vor einer Veröffentlichung noch zu testen.
+
+Siehe `RECHERCHE-UND-QUELLEN.md` für die konkret überprüften Rezeptportale und Links.

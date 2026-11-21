@@ -46,7 +46,7 @@
   },
   {
     "id": "spinat",
-    "name": "Spinat",
+    "name": "Spinat (frisch oder TK)",
     "category": "Gemüse & Salat"
   },
   {
@@ -141,7 +141,7 @@
   },
   {
     "id": "kraut",
-    "name": "Kraut",
+    "name": "Weißkraut / Weißkohl",
     "category": "Gemüse & Salat"
   },
   {
@@ -695,11 +695,6 @@
     "category": "Milchprodukte & Eier"
   },
   {
-    "id": "kohl",
-    "name": "Weißkohl",
-    "category": "Gemüse & Salat"
-  },
-  {
     "id": "mayonnaise",
     "name": "Mayonnaise",
     "category": "Vorrat & Saucen"
@@ -808,16 +803,6 @@
     "id": "rosenkohl",
     "name": "Rosenkohl",
     "category": "Gemüse & Salat"
-  },
-  {
-    "id": "spinat_tk",
-    "name": "TK-Spinat",
-    "category": "Gemüse & Salat"
-  },
-  {
-    "id": "sauerrahm",
-    "name": "Sauerrahm",
-    "category": "Milchprodukte & Eier"
   },
   {
     "id": "artischocken",

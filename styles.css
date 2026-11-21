@@ -29,3 +29,9 @@
 .category-tab-count{display:inline-flex;align-items:center;justify-content:center;margin-left:4px;border-radius:9px;padding:2px 5px;background:#f3f5ef;color:var(--muted);font-size:10px}
 .category-tab.active .category-tab-count{color:var(--green-dark);background:#eff6ed}
 @media(max-width:700px){.ingredient-groups{gap:20px}.ingredient-group+.ingredient-group{padding-top:16px}.ingredient-group-heading h3{font-size:14px}.ingredient-group-count{font-size:10px}}
+
+/* v9: always-visible live count; old ingredient duplicates are now canonicalized */
+.matching-summary{display:flex;align-items:center;gap:6px;white-space:nowrap;color:var(--muted);font-size:11px}
+.matching-summary strong{color:var(--green);font-size:16px}
+@media(max-width:700px){.matching-summary{font-size:10px}}
+@media(max-width:400px){.section-heading{flex-wrap:wrap}.ingredient-heading-actions{justify-content:flex-start}.matching-summary{margin-left:5px}}
