@@ -12195,5 +12195,1130 @@
     ],
     "source": null,
     "editorialStatus": "Eigenständiges Alltagsrezept, nicht probegekocht"
+  },
+  {
+    "id": "betty001",
+    "title": "Fleckerspeise mit Faschiertem und Wurst",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 25,
+    "servings": 2,
+    "ingredientIds": [
+      "nudeln",
+      "faschiertes",
+      "wurst",
+      "zwiebel",
+      "knoblauch",
+      "petersilie"
+    ],
+    "ingredients": [
+      {
+        "id": "nudeln",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "faschiertes",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "wurst",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "petersilie",
+        "amount": 2,
+        "unit": "EL"
+      }
+    ],
+    "description": "Herzhafte österreichische Fleckerspeise mit Faschiertem, Extrawurst und Petersilie.",
+    "steps": [
+      "Nudeln bissfest kochen und etwas Kochwasser aufheben.",
+      "Zwiebel fein schneiden und mit Faschiertem in Öl kräftig anbraten.",
+      "Knoblauch zugeben, mit Salz und Pfeffer würzen.",
+      "Gewürfelte Extrawurst oder Kalbspariser 2 Minuten mitbraten.",
+      "Nudeln untermischen, bei Bedarf etwas Kochwasser zugeben und mit Petersilie abschmecken."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty002",
+    "title": "Spaghetti mit Feta, Oliven und Cherrytomaten",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 20,
+    "servings": 2,
+    "ingredientIds": [
+      "spaghetti",
+      "feta",
+      "oliven",
+      "tomaten",
+      "knoblauch",
+      "oregano"
+    ],
+    "ingredients": [
+      {
+        "id": "spaghetti",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "feta",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "oliven",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "id": "tomaten",
+        "amount": 180,
+        "unit": "g"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "oregano",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Mediterrane Spaghetti mit Feta, Oliven und süßen Cherrytomaten.",
+    "steps": [
+      "Spaghetti bissfest kochen und etwas Kochwasser aufheben.",
+      "Cherrytomaten halbieren, Oliven schneiden, Knoblauch hacken und Feta zerbröseln.",
+      "Knoblauch, Tomaten und Oliven in 3 EL Olivenöl bei niedriger Hitze 2 Minuten erwärmen.",
+      "Spaghetti und Oregano zugeben, Feta vorsichtig unterheben und 1–2 Minuten erwärmen.",
+      "Mit Kochwasser geschmeidig machen, mit Salz und Pfeffer abschmecken. Für den Filter zählen Cherrytomaten und normale Tomaten gemeinsam als Tomaten."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty003",
+    "title": "Spaghetti Carbonara ohne Obers",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 20,
+    "servings": 2,
+    "ingredientIds": [
+      "spaghetti",
+      "ei",
+      "parmesan",
+      "speck"
+    ],
+    "ingredients": [
+      {
+        "id": "spaghetti",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "ei",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "parmesan",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "id": "speck",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "description": "Klassische Carbonara mit Ei, Parmesan und Speck – ganz ohne Schlagobers.",
+    "steps": [
+      "Spaghetti in Salzwasser bissfest kochen und Kochwasser aufheben.",
+      "Speck würfeln und ohne zusätzliches Öl knusprig braten.",
+      "Eier mit geriebenem Parmesan und reichlich Pfeffer verquirlen.",
+      "Spaghetti zum Speck geben, Pfanne vom Herd nehmen und kurz abkühlen lassen.",
+      "Ei-Parmesan-Mischung zügig unterrühren, mit etwas Kochwasser cremig machen; nicht weiter stark erhitzen."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty004",
+    "title": "Piccata Milanese mit Spaghetti und Tomatensauce",
+    "category": "Fleisch & Geflügel",
+    "minutes": 35,
+    "servings": 2,
+    "ingredientIds": [
+      "kalbfleisch",
+      "spaghetti",
+      "ei",
+      "parmesan",
+      "mehl",
+      "passata",
+      "zwiebel",
+      "knoblauch",
+      "oregano"
+    ],
+    "ingredients": [
+      {
+        "id": "kalbfleisch",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "spaghetti",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "ei",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "parmesan",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "id": "mehl",
+        "amount": 2,
+        "unit": "EL"
+      },
+      {
+        "id": "passata",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "oregano",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Kalbsschnitzel in Parmesan-Ei-Hülle mit Spaghetti und Tomatensauce.",
+    "steps": [
+      "Zwiebel und Knoblauch hacken, in Öl anschwitzen und Passata mit Oregano 15 Minuten köcheln lassen.",
+      "Spaghetti bissfest kochen.",
+      "Kalbsschnitzel flach klopfen, würzen und leicht in Mehl wenden.",
+      "Eier mit Parmesan verquirlen, Schnitzel darin wenden.",
+      "In einer Pfanne bei mittlerer Hitze in Öl beidseitig goldbraun braten, bis das Fleisch gar ist.",
+      "Spaghetti mit Tomatensauce und Piccata servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty005",
+    "title": "Thunfisch-Spaghetti mit leichter Tomaten-Obers-Sauce",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 20,
+    "servings": 2,
+    "ingredientIds": [
+      "spaghetti",
+      "thunfisch",
+      "passata",
+      "zwiebel",
+      "knoblauch",
+      "oregano"
+    ],
+    "ingredients": [
+      {
+        "id": "spaghetti",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "thunfisch",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "passata",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "oregano",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Thunfisch-Spaghetti in fruchtiger Tomatensauce mit einem kleinen Schuss Obers.",
+    "steps": [
+      "Spaghetti bissfest kochen und etwas Kochwasser aufheben.",
+      "Zwiebel in Olivenöl anschwitzen, gehackten Knoblauch kurz mitbraten.",
+      "Passata und Oregano zugeben und 5–7 Minuten köcheln lassen.",
+      "Optional 50 ml Schlagobers für eine mildere, cremigere Sauce einrühren.",
+      "Thunfisch abtropfen lassen, unterheben und kurz erwärmen.",
+      "Spaghetti untermischen, nach Bedarf Kochwasser ergänzen und abschmecken."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty006",
+    "title": "Schweinekoteletts in dunkler Kümmelsauce mit Reis",
+    "category": "Fleisch & Geflügel",
+    "minutes": 40,
+    "servings": 2,
+    "ingredientIds": [
+      "schweinefleisch",
+      "reis",
+      "zwiebel",
+      "knoblauch",
+      "kuemmel",
+      "bruehe",
+      "tomatenmark"
+    ],
+    "ingredients": [
+      {
+        "id": "schweinefleisch",
+        "amount": 380,
+        "unit": "g"
+      },
+      {
+        "id": "reis",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "kuemmel",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "bruehe",
+        "amount": 250,
+        "unit": "ml"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Kräftig gebratene Schweinekoteletts in dunkler Kümmel-Bratensauce.",
+    "steps": [
+      "Reis nach Packungsanleitung kochen.",
+      "Koteletts würzen und in Öl kräftig von beiden Seiten anbraten; herausnehmen.",
+      "Zwiebel im Bratrückstand dunkelgolden rösten, Knoblauch und Kümmel kurz mitrösten.",
+      "Tomatenmark zugeben und eine Minute mitrösten.",
+      "Mit kräftiger Brühe aufgießen und den Bratensatz lösen.",
+      "Koteletts einlegen und bei kleiner Hitze 10–15 Minuten sanft schmoren, bis sie gar sind.",
+      "Sauce bei Bedarf einkochen oder mit wenig Mehl binden; mit Reis servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty007",
+    "title": "Rindsrouladen mit Semmelknödeln",
+    "category": "Fleisch & Geflügel",
+    "minutes": 135,
+    "servings": 2,
+    "ingredientIds": [
+      "rind",
+      "speck",
+      "essiggurken",
+      "zwiebel",
+      "senf",
+      "karotte",
+      "tomatenmark",
+      "bruehe",
+      "knoedelbrot",
+      "milch",
+      "ei",
+      "petersilie",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "rind",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "speck",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "id": "essiggurken",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "senf",
+        "amount": 2,
+        "unit": "TL"
+      },
+      {
+        "id": "karotte",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "bruehe",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "id": "knoedelbrot",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "milch",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "ei",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "petersilie",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "butter",
+        "amount": 1,
+        "unit": "EL"
+      }
+    ],
+    "description": "Klassische Rindsrouladen mit Speck, Essiggurkerl, dunkler Sauce und hausgemachten Semmelknödeln.",
+    "steps": [
+      "Rindsschnitzel dünn klopfen, salzen, pfeffern und mit Senf bestreichen.",
+      "Mit Speck, Streifen einer Zwiebel und Essiggurken belegen, einrollen und fixieren.",
+      "Rouladen rundherum kräftig anbraten und herausnehmen.",
+      "Restliche Zwiebel und Karotte im Bratrückstand anrösten, Tomatenmark mitrösten und mit Brühe ablöschen.",
+      "Rouladen einlegen und zugedeckt 90–110 Minuten sanft schmoren, bis sie weich sind.",
+      "Für die Knödel fein gehackte Zwiebel in Butter anschwitzen; Knödelbrot mit warmer Milch, Ei, Petersilie, Zwiebel, Salz und Muskat vermengen.",
+      "Knödelmasse 15 Minuten ziehen lassen, 2–3 Knödel formen und in siedendem Salzwasser 15–20 Minuten gar ziehen lassen.",
+      "Rouladen herausheben, Sauce pürieren oder abseihen und einkochen; mit Semmelknödeln servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty008",
+    "title": "Tiroler Wurstknödel mit Extrawurst oder Kalbspariser",
+    "category": "Österreichische Küche",
+    "minutes": 40,
+    "servings": 2,
+    "ingredientIds": [
+      "knoedelbrot",
+      "wurst",
+      "milch",
+      "ei",
+      "zwiebel",
+      "petersilie",
+      "mehl",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "knoedelbrot",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "wurst",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "milch",
+        "amount": 120,
+        "unit": "ml"
+      },
+      {
+        "id": "ei",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "petersilie",
+        "amount": 2,
+        "unit": "EL"
+      },
+      {
+        "id": "mehl",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "butter",
+        "amount": 1,
+        "unit": "EL"
+      }
+    ],
+    "description": "Tiroler Knödelvariante mit Extrawurst oder Kalbspariser statt Speck.",
+    "steps": [
+      "Knödelbrot mit Milch und verquirlten Eiern vermengen.",
+      "Extrawurst oder Kalbspariser klein würfeln.",
+      "Zwiebel in Butter glasig anschwitzen, Wurst kurz mitbraten.",
+      "Wurst-Zwiebel-Mischung mit Petersilie, Mehl, Salz, Pfeffer und etwas Muskat zur Knödelmasse geben.",
+      "15 Minuten ziehen lassen, mit feuchten Händen vier Knödel formen.",
+      "In leicht siedendem Salzwasser 15–20 Minuten gar ziehen lassen; als Hauptgericht servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty009",
+    "title": "Spaghetti Bolognese ohne Karotten",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 50,
+    "servings": 2,
+    "ingredientIds": [
+      "spaghetti",
+      "faschiertes",
+      "passata",
+      "zwiebel",
+      "knoblauch",
+      "tomatenmark",
+      "oregano"
+    ],
+    "ingredients": [
+      {
+        "id": "spaghetti",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "faschiertes",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "id": "passata",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "oregano",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Kräftige Bolognese mit gemischtem Faschiertem, ohne Karotten.",
+    "steps": [
+      "Zwiebel und Knoblauch fein hacken.",
+      "Faschiertes in Olivenöl kräftig anbraten, Zwiebel zugeben und goldgelb rösten.",
+      "Knoblauch kurz mitbraten, Tomatenmark eine Minute anrösten.",
+      "Passata und Oregano zugeben, mit Salz und Pfeffer würzen und 25–30 Minuten sanft köcheln lassen.",
+      "Spaghetti bissfest kochen und mit der Sauce servieren; nach Wunsch Parmesan darüberreiben."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty010",
+    "title": "Griechische Hühnerkeulen mit knusprigen Kartoffeln und Gemüse",
+    "category": "Fleisch & Geflügel",
+    "minutes": 75,
+    "servings": 2,
+    "ingredientIds": [
+      "huhn",
+      "kartoffeln",
+      "karotte",
+      "paprika",
+      "zwiebel",
+      "knoblauch",
+      "zitrone",
+      "oregano",
+      "paprikapulver"
+    ],
+    "ingredients": [
+      {
+        "id": "huhn",
+        "amount": 500,
+        "unit": "g"
+      },
+      {
+        "id": "kartoffeln",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "karotte",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "paprika",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 3,
+        "unit": "Zehen"
+      },
+      {
+        "id": "zitrone",
+        "amount": 0.5,
+        "unit": "Stück"
+      },
+      {
+        "id": "oregano",
+        "amount": 1.5,
+        "unit": "TL"
+      },
+      {
+        "id": "paprikapulver",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Knusprige griechische Ofen-Hühnerkeulen mit Kartoffeln, Karotten und Paprika, ohne Brühe.",
+    "steps": [
+      "Backrohr auf 200 °C Umluft vorheizen.",
+      "Kartoffeln in Spalten, Karotten in Scheiben, Paprika und Zwiebel in Stücke schneiden.",
+      "Mit Knoblauch, 3 EL Olivenöl, wenig Zitronensaft, Oregano, Paprikapulver, Salz und Pfeffer vermengen.",
+      "Gemüse auf einem großen Blech möglichst nebeneinander verteilen, Hühnerkeulen mit Hautseite nach oben dazulegen.",
+      "Ohne zusätzliche Brühe etwa 50–60 Minuten braten, bis die Keulen durchgegart und Kartoffeln knusprig sind (Kerntemperatur mindestens 75 °C).",
+      "Bei Bedarf zuletzt kurz grillen, damit die Haut knusprig wird."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty011",
+    "title": "Hühner-Gyros-Pfanne mit Reis und Tzatziki",
+    "category": "Fleisch & Geflügel",
+    "minutes": 35,
+    "servings": 2,
+    "ingredientIds": [
+      "huhn",
+      "reis",
+      "paprika",
+      "zwiebel",
+      "knoblauch",
+      "oregano",
+      "paprikapulver",
+      "kreuzkuemmel",
+      "zitrone",
+      "sahnejoghurt",
+      "gurke"
+    ],
+    "ingredients": [
+      {
+        "id": "huhn",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "id": "reis",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "paprika",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 3,
+        "unit": "Zehen"
+      },
+      {
+        "id": "oregano",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "paprikapulver",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "kreuzkuemmel",
+        "amount": 0.5,
+        "unit": "TL"
+      },
+      {
+        "id": "zitrone",
+        "amount": 0.5,
+        "unit": "Stück"
+      },
+      {
+        "id": "sahnejoghurt",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "gurke",
+        "amount": 0.25,
+        "unit": "Stück"
+      }
+    ],
+    "description": "Würzige griechische Hühnerstreifen mit Paprika, Reis und frischem Tzatziki.",
+    "steps": [
+      "Hühnerfleisch in Streifen schneiden und mit Olivenöl, Oregano, Paprikapulver, Kreuzkümmel, etwas Zitronensaft, Salz und Pfeffer marinieren.",
+      "Reis nach Packungsanleitung kochen.",
+      "Paprika und Zwiebel in Streifen schneiden, zwei Knoblauchzehen hacken.",
+      "Hühnerstreifen portionsweise kräftig anbraten, bis sie vollständig gar sind; herausnehmen.",
+      "Paprika und Zwiebel im Bratrückstand braten, Knoblauch kurz mitrösten, Fleisch zurückgeben.",
+      "Für Tzatziki Gurke raspeln und ausdrücken, mit griechischem Joghurt, einer gepressten Knoblauchzehe, Zitronensaft, Salz und Pfeffer verrühren.",
+      "Gyros mit Reis und Tzatziki servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty012",
+    "title": "Putenschnitzel nach Wiener Art mit Reis",
+    "category": "Fleisch & Geflügel",
+    "minutes": 30,
+    "servings": 2,
+    "ingredientIds": [
+      "putenfleisch",
+      "reis",
+      "mehl",
+      "ei",
+      "sem_kruemel"
+    ],
+    "ingredients": [
+      {
+        "id": "putenfleisch",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "id": "reis",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "mehl",
+        "amount": 3,
+        "unit": "EL"
+      },
+      {
+        "id": "ei",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "sem_kruemel",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "description": "Knusprig paniertes Putenschnitzel mit Reis und Zitrone, ohne Sauce.",
+    "steps": [
+      "Reis in Salzwasser garen.",
+      "Putenschnitzel vorsichtig flach klopfen und salzen.",
+      "Schnitzel zuerst in Mehl, dann in verquirltem Ei und schließlich locker in Semmelbröseln wenden.",
+      "In reichlich heißem Öl bei mittlerer bis hoher Hitze auf beiden Seiten goldbraun herausbacken, bis das Putenfleisch durchgegart ist.",
+      "Auf Küchenpapier abtropfen lassen und mit Reis servieren; optional Zitronenspalten dazugeben."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty013",
+    "title": "Tortellini in leichter Schinken-Obers-Sauce",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 20,
+    "servings": 2,
+    "ingredientIds": [
+      "tortellini",
+      "schinken",
+      "sahne",
+      "parmesan",
+      "zwiebel",
+      "knoblauch"
+    ],
+    "ingredients": [
+      {
+        "id": "tortellini",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "schinken",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "sahne",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "parmesan",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      }
+    ],
+    "description": "Tortellini mit Kochschinken in einer leichten cremigen Sauce mit wenig Obers.",
+    "steps": [
+      "Tortellini nach Packungsanleitung kochen und 100 ml Kochwasser aufheben.",
+      "Schinken würfeln, Zwiebel und Knoblauch fein hacken.",
+      "Zwiebel in etwas Butter anschwitzen, Knoblauch und Schinken kurz mitbraten.",
+      "100 ml Schlagobers zugeben und 3 Minuten leicht köcheln lassen.",
+      "Parmesan einrühren, mit 50–100 ml Tortellini-Kochwasser zu einer leichten cremigen Sauce verrühren.",
+      "Tortellini unterheben und mit Pfeffer und wenig Salz abschmecken."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty014",
+    "title": "Cremiger One-Pot mit Hühnerfleisch und getrockneten Tomaten",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 30,
+    "servings": 2,
+    "ingredientIds": [
+      "huhn",
+      "penne",
+      "getrocknete_tomaten",
+      "sahne",
+      "parmesan",
+      "zwiebel",
+      "knoblauch",
+      "bruehe",
+      "tomatenmark"
+    ],
+    "ingredients": [
+      {
+        "id": "huhn",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "penne",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "getrocknete_tomaten",
+        "amount": 70,
+        "unit": "g"
+      },
+      {
+        "id": "sahne",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "parmesan",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "bruehe",
+        "amount": 450,
+        "unit": "ml"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Mediterrane One-Pot-Pasta mit Huhn und getrockneten Tomaten, ausdrücklich ohne Spinat.",
+    "steps": [
+      "Hühnerbrust in Stücke schneiden, getrocknete Tomaten in Streifen und Zwiebel und Knoblauch fein hacken.",
+      "Hühnerfleisch in Olivenöl rundherum anbraten.",
+      "Zwiebel, Knoblauch, Tomatenmark und getrocknete Tomaten kurz mitbraten.",
+      "Ungekochte Penne und Brühe hinzufügen und zugedeckt etwa 12–15 Minuten köcheln lassen; häufig umrühren und bei Bedarf etwas Wasser nachgießen.",
+      "Prüfen, dass Hühnerfleisch durchgegart ist, dann Schlagobers zugeben und kurz köcheln lassen.",
+      "Parmesan unterrühren, mit Salz und Pfeffer abschmecken und cremig servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
   }
 ]

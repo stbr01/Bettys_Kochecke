@@ -808,5 +808,30 @@
     "id": "artischocken",
     "name": "Artischocken",
     "category": "Gemüse & Salat"
+  },
+  {
+    "id": "wurst",
+    "name": "Extrawurst / Kalbspariser",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "kalbfleisch",
+    "name": "Kalbfleisch",
+    "category": "Fleisch & Geflügel"
+  },
+  {
+    "id": "kuemmel",
+    "name": "Kümmel",
+    "category": "Kräuter & Gewürze"
+  },
+  {
+    "id": "essiggurken",
+    "name": "Essiggurken",
+    "category": "Gemüse & Salat"
+  },
+  {
+    "id": "knoedelbrot",
+    "name": "Knödelbrot",
+    "category": "Nudeln, Reis & Getreide"
   }
 ]
