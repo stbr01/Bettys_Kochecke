@@ -833,5 +833,85 @@
     "id": "knoedelbrot",
     "name": "Knödelbrot",
     "category": "Nudeln, Reis & Getreide"
+  },
+  {
+    "id": "bratwurst",
+    "name": "Bratwürste",
+    "category": "Fleisch & Wurst"
+  },
+  {
+    "id": "ketchup",
+    "name": "Ketchup",
+    "category": "Vorrat & Saucen"
+  },
+  {
+    "id": "fladenbrot",
+    "name": "Fladenbrot",
+    "category": "Beilagen & Getreide"
+  },
+  {
+    "id": "ajvar",
+    "name": "Ajvar",
+    "category": "Vorrat & Saucen"
+  },
+  {
+    "id": "mie_nudeln",
+    "name": "Mie-Nudeln",
+    "category": "Beilagen & Getreide"
+  },
+  {
+    "id": "semmeln",
+    "name": "Semmeln",
+    "category": "Beilagen & Getreide"
+  },
+  {
+    "id": "ananas_saft",
+    "name": "Ananassaft",
+    "category": "Vorrat & Saucen"
+  },
+  {
+    "id": "bosna_weckerl",
+    "name": "Bosna-Weckerl",
+    "category": "Beilagen & Getreide"
+  },
+  {
+    "id": "toastbrot",
+    "name": "Toastbrot",
+    "category": "Beilagen & Getreide"
+  },
+  {
+    "id": "hotdog_broetchen",
+    "name": "Hot-Dog-Brötchen",
+    "category": "Beilagen & Getreide"
+  },
+  {
+    "id": "frankfurter",
+    "name": "Frankfurter Würstel",
+    "category": "Fleisch & Wurst"
+  },
+  {
+    "id": "roestzwiebeln",
+    "name": "Röstzwiebeln",
+    "category": "Vorrat & Saucen"
+  },
+  {
+    "id": "topfen",
+    "name": "Topfen",
+    "category": "Milchprodukte & Eier"
+  },
+  {
+    "id": "vanillezucker",
+    "name": "Vanillezucker",
+    "category": "Vorrat & Saucen"
+  },
+  {
+    "id": "staubzucker",
+    "name": "Staubzucker",
+    "category": "Vorrat & Saucen"
+  },
+  {
+    "id": "apfelmus",
+    "name": "Apfelmus",
+    "category": "Vorrat & Saucen"
   }
 ]

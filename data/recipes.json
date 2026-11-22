@@ -517,83 +517,6 @@
     }
   },
   {
-    "id": "q008",
-    "title": "Pasta Frutti di Mare",
-    "category": "Pasta & Nudelgerichte",
-    "minutes": 30,
-    "servings": 2,
-    "ingredientIds": [
-      "spaghetti",
-      "garnelen",
-      "muscheln",
-      "cherrytomaten",
-      "knoblauch",
-      "petersilie",
-      "zitronensaft"
-    ],
-    "ingredients": [
-      {
-        "id": "spaghetti",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "id": "garnelen",
-        "amount": 150,
-        "unit": "g"
-      },
-      {
-        "id": "muscheln",
-        "amount": 180,
-        "unit": "g"
-      },
-      {
-        "id": "cherrytomaten",
-        "amount": 180,
-        "unit": "g"
-      },
-      {
-        "id": "knoblauch",
-        "amount": 2,
-        "unit": "Zehen"
-      },
-      {
-        "id": "petersilie",
-        "amount": 2,
-        "unit": "EL"
-      },
-      {
-        "id": "zitronensaft",
-        "amount": 1,
-        "unit": "EL"
-      }
-    ],
-    "description": "Mediterrane Meeresfrüchte mit Tomaten und Knoblauch.",
-    "steps": [
-      "Spaghetti in Salzwasser kochen. Garnelen und Muscheln küchenfertig vorbereiten; frische Muscheln vor und nach dem Garen prüfen.",
-      "Knoblauch klein hacken, Tomaten halbieren und beides in Olivenöl 3 Minuten anschwitzen.",
-      "Meeresfrüchte zugeben und mit 80 ml Wasser unter Deckel garen, bis Garnelen und Muscheln durch sind; ungeöffnete frische Muscheln entsorgen.",
-      "Pasta samt etwas Kochwasser unterheben, mit Petersilie, Zitronensaft, Salz und Pfeffer fertig würzen."
-    ],
-    "tags": [
-      "Pasta",
-      "Fisch"
-    ],
-    "staples": [
-      "salz",
-      "pfeffer",
-      "olivenoel"
-    ],
-    "source": {
-      "site": "Einfach Kochen",
-      "url": "https://www.einfachkochen.de/rezepte/spaghetti-frutti-di-mare-soo-lecker-einfach",
-      "rating": 4.9,
-      "votes": 48,
-      "asOf": "2026-11-21",
-      "note": "Eigenständig vereinfachte, nicht unabhängig getestete Fassung. Die Bewertung gilt nur für das verlinkte Inspirationsrezept."
-    }
-  },
-  {
     "id": "q009",
     "title": "One-Pot-Pasta mit Spinat",
     "category": "Pasta & Nudelgerichte",
@@ -1204,78 +1127,6 @@
       "url": "https://www.chefkoch.de/rezepte/2440591384771932/Gemueselasagne-mit-Zucchini-und-Fetakaese.html",
       "rating": 4.9,
       "votes": 30,
-      "asOf": "2026-11-21",
-      "note": "Eigenständig vereinfachte, nicht unabhängig getestete Fassung. Die Bewertung gilt nur für das verlinkte Inspirationsrezept."
-    }
-  },
-  {
-    "id": "q017",
-    "title": "Gebratener Gemüsereis mit Ei",
-    "category": "Reisgerichte",
-    "minutes": 25,
-    "servings": 2,
-    "ingredientIds": [
-      "reis",
-      "ei",
-      "karotte",
-      "erbsen",
-      "sojasauce",
-      "fruehlingszwiebel"
-    ],
-    "ingredients": [
-      {
-        "id": "reis",
-        "amount": 180,
-        "unit": "g"
-      },
-      {
-        "id": "ei",
-        "amount": 2,
-        "unit": "Stück"
-      },
-      {
-        "id": "karotte",
-        "amount": 1,
-        "unit": "Stück"
-      },
-      {
-        "id": "erbsen",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "id": "sojasauce",
-        "amount": 2,
-        "unit": "EL"
-      },
-      {
-        "id": "fruehlingszwiebel",
-        "amount": 2,
-        "unit": "Stangen"
-      }
-    ],
-    "description": "Praktische Resteverwertung; am besten mit abgekühltem Reis.",
-    "steps": [
-      "Reis nach Packungsanweisung kochen und möglichst abkühlen lassen; bei Restereis auf durchgehende Kühlung achten.",
-      "Karotte klein würfeln und Frühlingszwiebeln in Ringe schneiden. Eier in einer Schüssel verquirlen.",
-      "Karotte und Erbsen in einer heißen Pfanne mit Öl 3 Minuten braten. Zur Seite schieben, Eier auf der freien Fläche stocken lassen und zerteilen.",
-      "Reis und Sojasauce zugeben, 3–4 Minuten unter Rühren braten. Mit Frühlingszwiebeln servieren."
-    ],
-    "tags": [
-      "Reis",
-      "vegetarisch",
-      "schnell"
-    ],
-    "staples": [
-      "salz",
-      "pfeffer",
-      "olivenoel"
-    ],
-    "source": {
-      "site": "Einfach Kochen",
-      "url": "https://www.einfachkochen.de/rezepte/gebratener-reis-mit-gemuese-und-ei-blitzschnell-einfach",
-      "rating": 5.0,
-      "votes": 21,
       "asOf": "2026-11-21",
       "note": "Eigenständig vereinfachte, nicht unabhängig getestete Fassung. Die Bewertung gilt nur für das verlinkte Inspirationsrezept."
     }
@@ -2175,83 +2026,6 @@
       "url": "https://www.chefkoch.de/rezepte/2022261327946408/Schweinegeschnetzeltes-mit-Gemuese-und-Ananas.html",
       "rating": 4.9,
       "votes": 23,
-      "asOf": "2026-11-21",
-      "note": "Eigenständig vereinfachte, nicht unabhängig getestete Fassung. Die Bewertung gilt nur für das verlinkte Inspirationsrezept."
-    }
-  },
-  {
-    "id": "q030",
-    "title": "Klassischer Coleslaw",
-    "category": "Vegetarisch",
-    "minutes": 20,
-    "servings": 2,
-    "ingredientIds": [
-      "kraut",
-      "karotte",
-      "zwiebel",
-      "mayonnaise",
-      "joghurt",
-      "essig",
-      "zucker"
-    ],
-    "ingredients": [
-      {
-        "id": "kraut",
-        "amount": 350,
-        "unit": "g"
-      },
-      {
-        "id": "karotte",
-        "amount": 1,
-        "unit": "Stück"
-      },
-      {
-        "id": "zwiebel",
-        "amount": 0.5,
-        "unit": "Stück"
-      },
-      {
-        "id": "mayonnaise",
-        "amount": 75,
-        "unit": "g"
-      },
-      {
-        "id": "joghurt",
-        "amount": 75,
-        "unit": "g"
-      },
-      {
-        "id": "essig",
-        "amount": 1,
-        "unit": "EL"
-      },
-      {
-        "id": "zucker",
-        "amount": 1,
-        "unit": "TL"
-      }
-    ],
-    "description": "Knackiger Krautsalat mit cremigem Dressing; als leichte Mahlzeit oder Beilage.",
-    "steps": [
-      "Kohl sehr fein hobeln, Karotte grob raspeln und Zwiebel besonders fein schneiden.",
-      "Mayonnaise, Joghurt, Essig, Zucker, Salz und Pfeffer in einer großen Schüssel verrühren.",
-      "Gemüse zum Dressing geben und mehrere Minuten gründlich durchmischen.",
-      "Mindestens 15 Minuten kühl ziehen lassen; vor dem Essen nochmals abschmecken."
-    ],
-    "tags": [
-      "Salat",
-      "vegetarisch"
-    ],
-    "staples": [
-      "salz",
-      "pfeffer",
-      "olivenoel"
-    ],
-    "source": {
-      "site": "Chefkoch",
-      "url": "https://www.chefkoch.de/rezepte/3017351454519857/KFC-Coleslaw.html",
-      "rating": 4.9,
-      "votes": 979,
       "asOf": "2026-11-21",
       "note": "Eigenständig vereinfachte, nicht unabhängig getestete Fassung. Die Bewertung gilt nur für das verlinkte Inspirationsrezept."
     }
@@ -5028,89 +4802,6 @@
       "url": "https://www.einfachkochen.de/rezepte/belugalinsensalat-soo-einfach-lecker",
       "rating": 4.9,
       "votes": 19,
-      "asOf": "2026-11-21",
-      "note": "Eigenständig formulierte, vereinfachte Fassung für 2 Portionen; nicht probegekocht. Die Bewertung bezieht sich ausschließlich auf das verlinkte Originalrezept."
-    }
-  },
-  {
-    "id": "q067",
-    "title": "Kürbis-Salbei-Risotto",
-    "category": "Reisgerichte",
-    "minutes": 50,
-    "servings": 2,
-    "ingredientIds": [
-      "risottoreis",
-      "kuerbis",
-      "salbei",
-      "zwiebel",
-      "bruehe",
-      "butter",
-      "parmesan",
-      "weisswein"
-    ],
-    "ingredients": [
-      {
-        "id": "risottoreis",
-        "amount": 170,
-        "unit": "g"
-      },
-      {
-        "id": "kuerbis",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "id": "salbei",
-        "amount": 1,
-        "unit": "EL"
-      },
-      {
-        "id": "zwiebel",
-        "amount": 1,
-        "unit": "Stück"
-      },
-      {
-        "id": "bruehe",
-        "amount": 600,
-        "unit": "ml"
-      },
-      {
-        "id": "butter",
-        "amount": 25,
-        "unit": "g"
-      },
-      {
-        "id": "parmesan",
-        "amount": 35,
-        "unit": "g"
-      },
-      {
-        "id": "weisswein",
-        "amount": 70,
-        "unit": "ml"
-      }
-    ],
-    "description": "Herbstliches Risotto mit süßlichem Kürbis und Salbei.",
-    "steps": [
-      "Backofen auf 210 °C Ober-/Unterhitze heizen. Kürbis würfeln, mit Öl und Salbei mischen und 25 Minuten rösten.",
-      "Zwiebel fein schneiden und in der Hälfte der Butter 3 Minuten sanft anschwitzen. Risottoreis 1 Minute mitrösten und Wein angießen.",
-      "Heiße Brühe nach und nach zugeben, unter häufigem Rühren 20–25 Minuten garen, bis der Reis cremig und noch bissfest ist.",
-      "Die Hälfte des Kürbisses zerdrücken, mit dem übrigen Kürbis, Parmesan und Butter unterrühren. Zwei Minuten ruhen lassen."
-    ],
-    "tags": [
-      "Reis",
-      "vegetarisch"
-    ],
-    "staples": [
-      "salz",
-      "pfeffer",
-      "olivenoel"
-    ],
-    "source": {
-      "site": "BBC Good Food",
-      "url": "https://www.bbcgoodfood.com/recipes/butternut-squash-sage-risotto",
-      "rating": 4.8,
-      "votes": 646,
       "asOf": "2026-11-21",
       "note": "Eigenständig formulierte, vereinfachte Fassung für 2 Portionen; nicht probegekocht. Die Bewertung bezieht sich ausschließlich auf das verlinkte Originalrezept."
     }
@@ -13304,6 +12995,1897 @@
       "Ungekochte Penne und Brühe hinzufügen und zugedeckt etwa 12–15 Minuten köcheln lassen; häufig umrühren und bei Bedarf etwas Wasser nachgießen.",
       "Prüfen, dass Hühnerfleisch durchgegart ist, dann Schlagobers zugeben und kurz köcheln lassen.",
       "Parmesan unterrühren, mit Salz und Pfeffer abschmecken und cremig servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty015",
+    "title": "Ćevapčići mit Fladenbrot und Ajvar",
+    "category": "Fleisch & Geflügel",
+    "minutes": 35,
+    "servings": 2,
+    "ingredientIds": [
+      "faschiertes",
+      "fladenbrot",
+      "zwiebel",
+      "knoblauch",
+      "ajvar",
+      "paprikapulver"
+    ],
+    "ingredients": [
+      {
+        "id": "faschiertes",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "fladenbrot",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "ajvar",
+        "amount": 4,
+        "unit": "EL"
+      },
+      {
+        "id": "paprikapulver",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Selbstgemachte Ćevapčići mit warmem Fladenbrot, Zwiebeln und Ajvar.",
+    "steps": [
+      "Zwiebel und Knoblauch fein hacken und mit Faschiertem, Paprikapulver, Salz und Pfeffer gründlich verkneten.",
+      "Aus der Masse 10–12 längliche Röllchen formen und nach Möglichkeit kurz kalt stellen.",
+      "In einer heißen Pfanne mit wenig Öl rundum braten, bis die Ćevapčići vollständig durchgegart sind.",
+      "Fladenbrot erwärmen und mit Ćevapčići, frischen Zwiebelringen und Ajvar servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty016",
+    "title": "Schweinsbraten mit knuspriger Schwarte, Semmelknödeln und Erdäpfeln",
+    "category": "Fleisch & Geflügel",
+    "minutes": 150,
+    "servings": 2,
+    "ingredientIds": [
+      "schweinefleisch",
+      "kartoffeln",
+      "knoedelbrot",
+      "milch",
+      "ei",
+      "zwiebel",
+      "knoblauch",
+      "kuemmel",
+      "petersilie",
+      "butter",
+      "bruehe"
+    ],
+    "ingredients": [
+      {
+        "id": "schweinefleisch",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "id": "kartoffeln",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "knoedelbrot",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "milch",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "ei",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 4,
+        "unit": "Zehen"
+      },
+      {
+        "id": "kuemmel",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "petersilie",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "butter",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "bruehe",
+        "amount": 250,
+        "unit": "ml"
+      }
+    ],
+    "description": "Saftiger Schweinsbraten mit knuspriger Schwarte, hausgemachten Semmelknödeln und Salzkartoffeln.",
+    "steps": [
+      "Schwarte rautenförmig einschneiden, Fleisch salzen und mit Kümmel würzen. Backofen auf 160 °C vorheizen.",
+      "Fleisch mit Zwiebeln, Knoblauch und Brühe in einen Bräter geben; etwa 90–120 Minuten garen und gelegentlich mit Bratensaft übergießen, die Schwarte möglichst trocken halten.",
+      "Für die Knödel Knödelbrot mit warmer Milch, Ei, angeschwitzten Zwiebeln und Petersilie vermengen; ruhen lassen, Knödel formen und in siedendem Salzwasser gar ziehen lassen.",
+      "Erdäpfel schälen und in Salzwasser weich kochen.",
+      "Ofen auf 230 °C erhöhen und Schwarte 10–20 Minuten knusprig bräunen; dabei beobachten. Bratensaft abschmecken und alles anrichten."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty017",
+    "title": "Hühnerschnitzel mit Tomaten und Mozzarella überbacken, dazu Reis",
+    "category": "Fleisch & Geflügel",
+    "minutes": 35,
+    "servings": 2,
+    "ingredientIds": [
+      "huhn",
+      "reis",
+      "tomaten",
+      "mozzarella",
+      "knoblauch",
+      "oregano"
+    ],
+    "ingredients": [
+      {
+        "id": "huhn",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "id": "reis",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "tomaten",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "mozzarella",
+        "amount": 125,
+        "unit": "g"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "oregano",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Unpanierte Hühnerschnitzel mit Tomaten und Mozzarella, dazu Reis.",
+    "steps": [
+      "Reis in Salzwasser garen und Backofen auf 200 °C vorheizen.",
+      "Hühnerschnitzel salzen, pfeffern und in Olivenöl von beiden Seiten anbraten.",
+      "Tomaten in Scheiben schneiden, mit Knoblauch und Oregano auf dem Fleisch verteilen und Mozzarella darüberlegen.",
+      "Etwa 10–15 Minuten im Ofen überbacken, bis der Käse schmilzt und das Huhn durchgegart ist; mit Reis servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty018",
+    "title": "Schweinemedaillons in Frühlingszwiebel-Senf-Sauce mit Reis",
+    "category": "Fleisch & Geflügel",
+    "minutes": 30,
+    "servings": 2,
+    "ingredientIds": [
+      "schweinefleisch",
+      "fruehlingszwiebel",
+      "knoblauch",
+      "senf",
+      "sahne",
+      "bruehe",
+      "reis",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "schweinefleisch",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "fruehlingszwiebel",
+        "amount": 3,
+        "unit": "Stangen"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "senf",
+        "amount": 2,
+        "unit": "TL"
+      },
+      {
+        "id": "sahne",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "bruehe",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "id": "reis",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "butter",
+        "amount": 1,
+        "unit": "EL"
+      }
+    ],
+    "description": "Zarte Schweinemedaillons in cremiger Senfsauce mit Frühlingszwiebeln und Reis.",
+    "steps": [
+      "Reis nach Packungsanweisung kochen. Schweinsfilet in Medaillons schneiden und würzen.",
+      "Medaillons in heißem Öl beidseitig anbraten und herausnehmen.",
+      "Frühlingszwiebeln und Knoblauch in Butter anschwitzen, Senf einrühren und mit Brühe und Obers ablöschen.",
+      "Sauce kurz einkochen, Medaillons wieder einlegen und sanft fertig garen. Mit Reis servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty019",
+    "title": "Putenrouladen mit Gervais-Füllung und Kapernsauce, dazu Reis",
+    "category": "Fleisch & Geflügel",
+    "minutes": 45,
+    "servings": 2,
+    "ingredientIds": [
+      "putenfleisch",
+      "frischkaese",
+      "kapern",
+      "zwiebel",
+      "knoblauch",
+      "senf",
+      "sahne",
+      "bruehe",
+      "butter",
+      "reis"
+    ],
+    "ingredients": [
+      {
+        "id": "putenfleisch",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "frischkaese",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "kapern",
+        "amount": 2,
+        "unit": "EL"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "senf",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "sahne",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "bruehe",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "id": "butter",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "reis",
+        "amount": 150,
+        "unit": "g"
+      }
+    ],
+    "description": "Putenrouladen mit Frischkäsefüllung und feiner Kapern-Obers-Sauce.",
+    "steps": [
+      "Putenschnitzel flach klopfen, mit Senf und Gervais bestreichen, einrollen und fixieren.",
+      "Rouladen in Butter und Öl rundherum anbraten und herausnehmen.",
+      "Zwiebel und Knoblauch anschwitzen, mit Brühe ablöschen, Kapern zugeben und Rouladen zugedeckt etwa 20 Minuten sanft garen.",
+      "Reis kochen. Obers in die Sauce rühren, abschmecken und die fertigen Rouladen mit Reis servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty020",
+    "title": "Putenroller mit Schinken-Käse-Füllung, Schupfnudeln und dunkler Bratensauce",
+    "category": "Fleisch & Geflügel",
+    "minutes": 60,
+    "servings": 2,
+    "ingredientIds": [
+      "putenfleisch",
+      "schinken",
+      "gouda",
+      "schupfnudeln",
+      "zwiebel",
+      "knoblauch",
+      "senf",
+      "tomatenmark",
+      "bruehe",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "putenfleisch",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "schinken",
+        "amount": 2,
+        "unit": "Scheiben"
+      },
+      {
+        "id": "gouda",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "id": "schupfnudeln",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "senf",
+        "amount": 2,
+        "unit": "TL"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "bruehe",
+        "amount": 250,
+        "unit": "ml"
+      },
+      {
+        "id": "butter",
+        "amount": 1,
+        "unit": "EL"
+      }
+    ],
+    "description": "Mit Schinken und Käse gefüllte Putenroller in dunkler Sauce mit gebratenen Schupfnudeln.",
+    "steps": [
+      "Putenschnitzel flach klopfen, mit Senf bestreichen, mit Schinken und Käse belegen, aufrollen und fixieren.",
+      "Putenroller rundherum anbraten und herausnehmen. Zwiebel und Knoblauch anrösten, Tomatenmark kurz mitrösten.",
+      "Mit Brühe ablöschen, Putenroller einlegen und zugedeckt etwa 25 Minuten sanft garen; Sauce abschmecken.",
+      "Schupfnudeln in Butter goldbraun braten und mit den Putenrollern und dunkler Sauce servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty021",
+    "title": "Nudelpfanne mit Erbsen und Knacker",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 25,
+    "servings": 2,
+    "ingredientIds": [
+      "nudeln",
+      "wurst",
+      "erbsen",
+      "zwiebel",
+      "knoblauch",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "nudeln",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "wurst",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "erbsen",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "butter",
+        "amount": 20,
+        "unit": "g"
+      }
+    ],
+    "description": "Herzhafte Nudelpfanne mit Erbsen und Knacker, ohne Obers oder Brühe.",
+    "steps": [
+      "Nudeln in Salzwasser bissfest kochen und 100 ml Kochwasser auffangen.",
+      "Knacker in Scheiben schneiden und in Butter anbraten.",
+      "Zwiebel und Knoblauch zugeben, kurz anschwitzen und Erbsen mit etwas Wasser garen.",
+      "Nudeln mit 50–100 ml Kochwasser untermischen, würzen und heiß servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty022",
+    "title": "Putengeschnetzeltes in Paprikasauce mit Spätzle",
+    "category": "Fleisch & Geflügel",
+    "minutes": 35,
+    "servings": 2,
+    "ingredientIds": [
+      "putenfleisch",
+      "spätzle",
+      "paprika",
+      "zwiebel",
+      "knoblauch",
+      "tomatenmark",
+      "paprikapulver",
+      "sahne",
+      "bruehe"
+    ],
+    "ingredients": [
+      {
+        "id": "putenfleisch",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "id": "spätzle",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "paprika",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "paprikapulver",
+        "amount": 2,
+        "unit": "TL"
+      },
+      {
+        "id": "sahne",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "bruehe",
+        "amount": 200,
+        "unit": "ml"
+      }
+    ],
+    "description": "Putengeschnetzeltes in milder Paprika-Obers-Sauce mit Spätzle.",
+    "steps": [
+      "Putenfleisch in Streifen schneiden und in Öl scharf anbraten, herausnehmen.",
+      "Paprika, Zwiebel und Knoblauch klein schneiden und im Bratfett anschwitzen.",
+      "Tomatenmark und Paprikapulver kurz mitrösten, Brühe und Obers zugeben.",
+      "Fleisch wieder einlegen und sanft fertig garen. Spätzle nach Packungsanweisung erhitzen und mit der Sauce servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty023",
+    "title": "Putengeschnetzeltes in cremiger Champignonsauce mit Reis",
+    "category": "Fleisch & Geflügel",
+    "minutes": 30,
+    "servings": 2,
+    "ingredientIds": [
+      "putenfleisch",
+      "champignons",
+      "reis",
+      "zwiebel",
+      "knoblauch",
+      "sahne",
+      "bruehe",
+      "senf",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "putenfleisch",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "id": "champignons",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "id": "reis",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "sahne",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "id": "bruehe",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "id": "senf",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "butter",
+        "amount": 1,
+        "unit": "EL"
+      }
+    ],
+    "description": "Putenstreifen mit frischen Champignons in Rahmsauce, dazu Reis.",
+    "steps": [
+      "Reis in Salzwasser kochen. Putenfleisch in Streifen schneiden und anbraten, herausnehmen.",
+      "Champignons kräftig anbraten, Zwiebel und Knoblauch zugeben.",
+      "Mit Brühe und Obers ablöschen und Senf einrühren.",
+      "Putenfleisch zurückgeben und vollständig durchgaren; mit Reis servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty024",
+    "title": "Mildes Chili con Carne mit Brot oder Baguette",
+    "category": "Fleisch & Geflügel",
+    "minutes": 45,
+    "servings": 2,
+    "ingredientIds": [
+      "faschiertes",
+      "kidneybohnen",
+      "mais",
+      "passata",
+      "paprika",
+      "zwiebel",
+      "knoblauch",
+      "tomatenmark",
+      "paprikapulver",
+      "kreuzkuemmel",
+      "bruehe",
+      "brot"
+    ],
+    "ingredients": [
+      {
+        "id": "faschiertes",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "kidneybohnen",
+        "amount": 240,
+        "unit": "g"
+      },
+      {
+        "id": "mais",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "passata",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "paprika",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "paprikapulver",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "kreuzkuemmel",
+        "amount": 0.5,
+        "unit": "TL"
+      },
+      {
+        "id": "bruehe",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "brot",
+        "amount": 180,
+        "unit": "g"
+      }
+    ],
+    "description": "Mild gewürztes Chili mit Faschiertem, Bohnen, Mais und Brot.",
+    "steps": [
+      "Zwiebel, Knoblauch und Paprika schneiden. Faschiertes in Öl krümelig und vollständig anbraten.",
+      "Gemüse und Tomatenmark zugeben, kurz mitrösten und mit Paprikapulver und Kreuzkümmel würzen.",
+      "Passata und Brühe zugeben, 20 Minuten sanft köcheln.",
+      "Abgespülte Kidneybohnen und Mais einrühren und weitere 5–10 Minuten erhitzen. Mild abschmecken und mit Brot oder Baguette servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty025",
+    "title": "Asiatisch gebratene Nudeln mit Putenfleisch und Gemüse",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 30,
+    "servings": 2,
+    "ingredientIds": [
+      "putenfleisch",
+      "mie_nudeln",
+      "karotte",
+      "paprika",
+      "fruehlingszwiebel",
+      "knoblauch",
+      "sojasauce"
+    ],
+    "ingredients": [
+      {
+        "id": "putenfleisch",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "mie_nudeln",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "karotte",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "paprika",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "fruehlingszwiebel",
+        "amount": 2,
+        "unit": "Stangen"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "sojasauce",
+        "amount": 4,
+        "unit": "EL"
+      }
+    ],
+    "description": "Gebratene Mie-Nudeln mit Pute, Gemüse und Sojasauce, ohne Ei oder Sprossen.",
+    "steps": [
+      "Mie-Nudeln nach Packungsanweisung zubereiten und abtropfen lassen.",
+      "Putenfleisch in Streifen schneiden und in heißem Öl vollständig durchbraten, herausnehmen.",
+      "Karotte, Paprika, Frühlingszwiebeln und Knoblauch in der Pfanne bissfest braten.",
+      "Nudeln und Fleisch untermischen, Sojasauce zugeben und alles kurz kräftig durchschwenken."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty026",
+    "title": "Pizzasemmerl oder Pizzatoast mit Paprika",
+    "category": "Snacks & Jause",
+    "minutes": 20,
+    "servings": 2,
+    "ingredientIds": [
+      "semmeln",
+      "wurst",
+      "mais",
+      "paprika",
+      "schmand",
+      "mozzarella",
+      "oregano"
+    ],
+    "ingredients": [
+      {
+        "id": "semmeln",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "wurst",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "mais",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "paprika",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "schmand",
+        "amount": 125,
+        "unit": "g"
+      },
+      {
+        "id": "mozzarella",
+        "amount": 125,
+        "unit": "g"
+      },
+      {
+        "id": "oregano",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Knusprig überbackene Semmeln oder Toasts mit Wurst, Paprika, Mais und Käse.",
+    "steps": [
+      "Backofen auf 200 °C vorheizen. Semmeln halbieren oder alternativ vier Toastscheiben verwenden.",
+      "Paprika und Kantwurst oder Salami klein würfeln.",
+      "Wurst, Paprika, Mais, Sauerrahm, Oregano und geriebenen Käse vermischen und auf den Broten verteilen.",
+      "10–15 Minuten goldbraun überbacken."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty027",
+    "title": "Putengeschnetzeltes mit Ananas in milder Curry-Rahmsauce und Reis",
+    "category": "Fleisch & Geflügel",
+    "minutes": 30,
+    "servings": 2,
+    "ingredientIds": [
+      "putenfleisch",
+      "ananas",
+      "reis",
+      "zwiebel",
+      "knoblauch",
+      "sahne",
+      "bruehe",
+      "ananas_saft",
+      "currypulver"
+    ],
+    "ingredients": [
+      {
+        "id": "putenfleisch",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "id": "ananas",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "reis",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "sahne",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "id": "bruehe",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "id": "ananas_saft",
+        "amount": 50,
+        "unit": "ml"
+      },
+      {
+        "id": "currypulver",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Milde Curry-Obers-Sauce mit Pute und Ananas, dazu Reis.",
+    "steps": [
+      "Reis kochen. Putenfleisch in Streifen schneiden und in Öl anbraten, herausnehmen.",
+      "Zwiebel und Knoblauch anschwitzen und mildes Currypulver kurz mitrösten.",
+      "Mit Brühe, Obers und Ananassaft ablöschen; Ananasstücke zugeben.",
+      "Putenfleisch wieder einlegen, vollständig durchgaren und mit Reis servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty028",
+    "title": "Klassische Lasagne al Forno",
+    "category": "Pasta & Nudelgerichte",
+    "minutes": 75,
+    "servings": 2,
+    "ingredientIds": [
+      "lasagneplatten",
+      "faschiertes",
+      "passata",
+      "zwiebel",
+      "knoblauch",
+      "tomatenmark",
+      "oregano",
+      "milch",
+      "butter",
+      "mehl",
+      "mozzarella",
+      "parmesan"
+    ],
+    "ingredients": [
+      {
+        "id": "lasagneplatten",
+        "amount": 8,
+        "unit": "Stück"
+      },
+      {
+        "id": "faschiertes",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "id": "passata",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "oregano",
+        "amount": 1,
+        "unit": "TL"
+      },
+      {
+        "id": "milch",
+        "amount": 250,
+        "unit": "ml"
+      },
+      {
+        "id": "butter",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "id": "mehl",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "id": "mozzarella",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "parmesan",
+        "amount": 30,
+        "unit": "g"
+      }
+    ],
+    "description": "Klassische Lasagne mit Faschiertem, Tomatensauce und selbstgemachter Béchamel.",
+    "steps": [
+      "Backofen auf 180 °C vorheizen. Zwiebel und Knoblauch anschwitzen, Faschiertes krümelig anbraten.",
+      "Tomatenmark, Passata und Oregano zugeben und etwa 15 Minuten köcheln lassen.",
+      "Butter schmelzen, Mehl einrühren, Milch nach und nach zugeben und unter Rühren zu einer Béchamel einkochen; mit Salz, Pfeffer und Muskat würzen.",
+      "In einer Form Bolognese, Lasagneplatten und Béchamel schichten. Mit Mozzarella und Parmesan abschließen.",
+      "35–40 Minuten backen, bis die Lasagne gar und goldbraun ist; kurz ruhen lassen."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty029",
+    "title": "Klassischer Bosner (Bosna)",
+    "category": "Snacks & Jause",
+    "minutes": 20,
+    "servings": 2,
+    "ingredientIds": [
+      "bosna_weckerl",
+      "bratwurst",
+      "zwiebel",
+      "senf",
+      "ketchup",
+      "currypulver"
+    ],
+    "ingredients": [
+      {
+        "id": "bosna_weckerl",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "bratwurst",
+        "amount": 4,
+        "unit": "Stück"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "senf",
+        "amount": 2,
+        "unit": "EL"
+      },
+      {
+        "id": "ketchup",
+        "amount": 2,
+        "unit": "EL"
+      },
+      {
+        "id": "currypulver",
+        "amount": 2,
+        "unit": "TL"
+      }
+    ],
+    "description": "Österreichischer Bosner mit Bratwürsten, Zwiebeln, Senf, Ketchup und Curry.",
+    "steps": [
+      "Bratwürste in einer Pfanne oder am Grill vollständig durchbraten.",
+      "Zwiebel fein würfeln und Weckerl aufschneiden und kurz erwärmen.",
+      "Weckerl mit Senf und Ketchup bestreichen, Würste einlegen und mit rohen Zwiebelwürfeln belegen.",
+      "Mit Currypulver bestreuen und sofort servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty030",
+    "title": "Klassischer Spargeltoast mit Schinken und Käse",
+    "category": "Snacks & Jause",
+    "minutes": 20,
+    "servings": 2,
+    "ingredientIds": [
+      "toastbrot",
+      "spargel",
+      "schinken",
+      "gouda",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "toastbrot",
+        "amount": 4,
+        "unit": "Scheiben"
+      },
+      {
+        "id": "spargel",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "id": "schinken",
+        "amount": 4,
+        "unit": "Scheiben"
+      },
+      {
+        "id": "gouda",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "butter",
+        "amount": 10,
+        "unit": "g"
+      }
+    ],
+    "description": "Toast mit weißem Spargel, Schinken und geschmolzenem Käse, ohne Hollandaise.",
+    "steps": [
+      "Backofen auf 200 °C vorheizen. Spargel aus dem Glas gut abtropfen lassen.",
+      "Toastscheiben leicht rösten und dünn mit Butter bestreichen.",
+      "Mit Schinken, Spargel und geriebenem Käse belegen.",
+      "8–10 Minuten überbacken, bis der Käse geschmolzen und leicht goldbraun ist."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty031",
+    "title": "Klassischer Hot Dog mit Ketchup, Senf und Röstzwiebeln",
+    "category": "Snacks & Jause",
+    "minutes": 15,
+    "servings": 2,
+    "ingredientIds": [
+      "hotdog_broetchen",
+      "frankfurter",
+      "ketchup",
+      "senf",
+      "roestzwiebeln"
+    ],
+    "ingredients": [
+      {
+        "id": "hotdog_broetchen",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "frankfurter",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "ketchup",
+        "amount": 2,
+        "unit": "EL"
+      },
+      {
+        "id": "senf",
+        "amount": 2,
+        "unit": "TL"
+      },
+      {
+        "id": "roestzwiebeln",
+        "amount": 2,
+        "unit": "EL"
+      }
+    ],
+    "description": "Hot Dogs mit Frankfurtern, Ketchup, Senf und Röstzwiebeln.",
+    "steps": [
+      "Frankfurter in heißem, nicht kochendem Wasser 5–7 Minuten erwärmen.",
+      "Hot-Dog-Brötchen kurz erwärmen und aufschneiden.",
+      "Je ein Würstel einlegen, Ketchup und Senf darübergeben.",
+      "Mit Röstzwiebeln bestreuen und sofort servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty032",
+    "title": "Gefüllte Ofenkartoffeln mit Schinken und Käse überbacken",
+    "category": "Ofengerichte",
+    "minutes": 75,
+    "servings": 2,
+    "ingredientIds": [
+      "kartoffeln",
+      "schinken",
+      "gouda",
+      "schmand",
+      "fruehlingszwiebel",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "kartoffeln",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "id": "schinken",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "id": "gouda",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "schmand",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "fruehlingszwiebel",
+        "amount": 1,
+        "unit": "Stange"
+      },
+      {
+        "id": "butter",
+        "amount": 15,
+        "unit": "g"
+      }
+    ],
+    "description": "Gefüllte Erdäpfel mit Schinken, Sauerrahm und Käse überbacken.",
+    "steps": [
+      "Backofen auf 200 °C vorheizen. Große Erdäpfel waschen und 45–60 Minuten backen, bis sie weich sind.",
+      "Erdäpfel längs halbieren und das Innere vorsichtig herauslösen.",
+      "Erdäpfelmasse mit Schinkenwürfeln, Sauerrahm, Frühlingszwiebel, Butter und der Hälfte des Käses vermengen; würzen.",
+      "Masse in die Schalen füllen, mit restlichem Käse bestreuen und weitere 10–15 Minuten überbacken."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty033",
+    "title": "Bratwürste mit Speck-Erdäpfelgröstl",
+    "category": "Fleisch & Geflügel",
+    "minutes": 40,
+    "servings": 2,
+    "ingredientIds": [
+      "bratwurst",
+      "kartoffeln",
+      "speck",
+      "zwiebel",
+      "knoblauch",
+      "butter"
+    ],
+    "ingredients": [
+      {
+        "id": "bratwurst",
+        "amount": 4,
+        "unit": "Stück"
+      },
+      {
+        "id": "kartoffeln",
+        "amount": 500,
+        "unit": "g"
+      },
+      {
+        "id": "speck",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "butter",
+        "amount": 20,
+        "unit": "g"
+      }
+    ],
+    "description": "Gebratene Würste mit knusprigem Erdäpfelgröstl, Speck und Zwiebeln.",
+    "steps": [
+      "Erdäpfel in Salzwasser knapp gar kochen, ausdampfen lassen und in Scheiben schneiden.",
+      "Speckwürfel in einer Pfanne auslassen, Zwiebel und Knoblauch zugeben.",
+      "Erdäpfelscheiben und Butter hinzufügen und bei mittlerer bis hoher Hitze goldbraun rösten.",
+      "Bratwürste separat rundum durchbraten und mit dem Speck-Erdäpfelgröstl servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty034",
+    "title": "Gefüllte Paprika mit Faschiertem und Reisfüllung in Tomatensauce, dazu Salzkartoffeln",
+    "category": "Fleisch & Geflügel",
+    "minutes": 65,
+    "servings": 2,
+    "ingredientIds": [
+      "paprika",
+      "faschiertes",
+      "reis",
+      "kartoffeln",
+      "zwiebel",
+      "knoblauch",
+      "ei",
+      "petersilie",
+      "passata",
+      "tomatenmark",
+      "bruehe"
+    ],
+    "ingredients": [
+      {
+        "id": "paprika",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "faschiertes",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "reis",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "id": "kartoffeln",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 2,
+        "unit": "Zehen"
+      },
+      {
+        "id": "ei",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "petersilie",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "passata",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "id": "tomatenmark",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "bruehe",
+        "amount": 200,
+        "unit": "ml"
+      }
+    ],
+    "description": "Gefüllte Paprika mit Faschiertem und Reis in Tomatensauce, dazu Salzkartoffeln.",
+    "steps": [
+      "Reis kurz vorkochen. Paprika am Stielansatz öffnen und entkernen.",
+      "Faschiertes mit Reis, Ei, fein gehackter Zwiebel, Knoblauch, Petersilie und Gewürzen vermengen und Paprika füllen.",
+      "Tomatenmark kurz anrösten, Passata und Brühe zugeben und gefüllte Paprika darin zugedeckt etwa 40–45 Minuten sanft garen, bis die Füllung durchgegart ist.",
+      "Erdäpfel schälen und in Salzwasser etwa 20 Minuten weich kochen. Paprika mit Tomatensauce und Salzkartoffeln servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty035",
+    "title": "Überbackene Frittatenrollen mit Faschiertem und Sauerrahm-Käse-Kruste",
+    "category": "Ofengerichte",
+    "minutes": 50,
+    "servings": 2,
+    "ingredientIds": [
+      "faschiertes",
+      "zwiebel",
+      "knoblauch",
+      "mehl",
+      "milch",
+      "ei",
+      "schmand",
+      "gouda",
+      "paprikapulver"
+    ],
+    "ingredients": [
+      {
+        "id": "faschiertes",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "mehl",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "milch",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "id": "ei",
+        "amount": 2,
+        "unit": "Stück"
+      },
+      {
+        "id": "schmand",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "gouda",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "id": "paprikapulver",
+        "amount": 1,
+        "unit": "TL"
+      }
+    ],
+    "description": "Herzhafte Frittatenrollen mit Faschiertem, ohne Panade, mit Sauerrahm und Käse überbacken.",
+    "steps": [
+      "Aus Mehl, Milch und einem Ei einen glatten Teig rühren und in einer Pfanne vier dünne Frittaten backen.",
+      "Faschiertes mit Zwiebel und Knoblauch anbraten, mit Paprikapulver, Salz und Pfeffer würzen.",
+      "Frittaten mit Faschiertem füllen, einrollen und in eine Auflaufform legen.",
+      "Sauerrahm mit dem zweiten Ei und 80 g Käse verrühren, über die Rollen gießen und mit restlichen 40 g Käse bestreuen.",
+      "Bei 190 °C Ober-/Unterhitze 20–25 Minuten goldbraun überbacken. Nicht panieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty036",
+    "title": "Topfen-Käse-Laibchen mit Sauerrahmdip",
+    "category": "Vegetarisch",
+    "minutes": 30,
+    "servings": 2,
+    "ingredientIds": [
+      "topfen",
+      "gouda",
+      "ei",
+      "sem_kruemel",
+      "zwiebel",
+      "knoblauch",
+      "petersilie",
+      "paprikapulver",
+      "schmand",
+      "schnittlauch"
+    ],
+    "ingredients": [
+      {
+        "id": "topfen",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "id": "gouda",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "id": "ei",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "sem_kruemel",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "id": "zwiebel",
+        "amount": 1,
+        "unit": "Stück"
+      },
+      {
+        "id": "knoblauch",
+        "amount": 1,
+        "unit": "Zehe"
+      },
+      {
+        "id": "petersilie",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "id": "paprikapulver",
+        "amount": 0.5,
+        "unit": "TL"
+      },
+      {
+        "id": "schmand",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "id": "schnittlauch",
+        "amount": 1,
+        "unit": "EL"
+      }
+    ],
+    "description": "Außen knusprige Topfen-Käse-Laibchen mit Sauerrahmdip, ohne weitere Beilage.",
+    "steps": [
+      "Zwiebel fein hacken und glasig anschwitzen.",
+      "Mit Topfen, Käse, Ei, Semmelbröseln, Knoblauch, Petersilie und Gewürzen vermischen. 5–10 Minuten ruhen lassen.",
+      "Etwa sechs kleine Laibchen formen und in Öl bei mittlerer Hitze je Seite 4–5 Minuten goldbraun braten.",
+      "Sauerrahm mit Schnittlauch, Salz und Pfeffer verrühren und zu den Laibchen servieren."
+    ],
+    "tags": [
+      "Bettys Familienrezepte"
+    ],
+    "staples": [
+      "salz",
+      "pfeffer",
+      "olivenoel"
+    ],
+    "source": {
+      "site": "Bettys Kochecke",
+      "url": "",
+      "rating": null,
+      "votes": 0,
+      "note": "Persönliches Rezept, gemeinsam ausgearbeitet."
+    }
+  },
+  {
+    "id": "betty037",
+    "title": "Kaiserschmarrn mit Apfelmus",
+    "category": "Süßspeisen",
+    "minutes": 30,
+    "servings": 2,
+    "ingredientIds": [
+      "mehl",
+      "milch",
+      "ei",
+      "zucker",
+      "vanillezucker",
+      "butter",
+      "staubzucker",
+      "apfelmus"
+    ],
+    "ingredients": [
+      {
+        "id": "mehl",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "id": "milch",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "id": "ei",
+        "amount": 3,
+        "unit": "Stück"
+      },
+      {
+        "id": "zucker",
+        "amount": 2,
+        "unit": "EL"
+      },
+      {
+        "id": "vanillezucker",
+        "amount": 1,
+        "unit": "Päckchen"
+      },
+      {
+        "id": "butter",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "id": "staubzucker",
+        "amount": 2,
+        "unit": "EL"
+      },
+      {
+        "id": "apfelmus",
+        "amount": 200,
+        "unit": "g"
+      }
+    ],
+    "description": "Flaumiger Kaiserschmarrn mit Staubzucker und Apfelmus, ohne Rosinen.",
+    "steps": [
+      "Eier trennen. Dotter mit Milch, Mehl, Zucker und Vanillezucker zu einem glatten Teig verrühren.",
+      "Eiklar mit einer Prise Salz steif schlagen und vorsichtig unter den Teig heben.",
+      "Die Hälfte der Butter in einer großen Pfanne erhitzen, Teig eingießen und bei mittlerer Hitze 4–5 Minuten backen.",
+      "Teig vierteln, wenden und weitere 3–4 Minuten backen; in Stücke reißen und mit restlicher Butter kurz goldbraun braten.",
+      "Mit Staubzucker bestreuen und mit Apfelmus servieren."
     ],
     "tags": [
       "Bettys Familienrezepte"
