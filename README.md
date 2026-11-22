@@ -1,44 +1,32 @@
-# Bettys Kochecke – Version 9 (Vorabversion)
+# Bettys Kochecke – Version 1.0.1
 
-## Ergebnis
+Persönlicher Rezeptgenerator mit Zutaten-Auswahl, Zufallsrezepten, Rezeptlinks und wiederverwendbaren Zutatenlisten-QR-Codes. Bereitstellung als statische Webseite, z. B. über Cloudflare Pages.
 
-- **196 individuell ausgearbeitete Rezepte**: 75 aus Version 8, dazu 121 neue Alltagsrezepte.
-- **162 auswählbare Zutaten** in den unveränderten neun Kategorien (vorher 165).
-- Doppelte Zutaten-IDs vereinheitlicht:
-  - `spinat_tk` → `spinat` (Anzeige: **Spinat (frisch oder TK)**)
-  - `sauerrahm` → `schmand` (Anzeige: **Sauerrahm**)
-  - `kohl` → `kraut` (Anzeige: **Weißkraut / Weißkohl**)
-- Alte lokal gespeicherte Auswahl wird beim Laden automatisch anhand dieser drei IDs zusammengeführt. Falls beide Varianten ausgewählt waren, zählt die zusammengelegte Zutat nur einmal.
-- **Bestehende Rezept-IDs unverändert.** Alle 75 vorhandenen Rezepte referenzieren weiterhin vollständige und gültige Zutatenlisten.
-- **Strenges Matching** bleibt bestehen: Nur Zutaten aus der aktivierten Auswahl, außer den explizit erlaubten Grundzutaten Salz, Pfeffer und Öl. Normale Pastasorten sind weiterhin tauschbar.
-- Zusätzlich kann eine **ausgewählte frische Zitrone** die Zutat **Zitronensaft** abdecken, nicht umgekehrt (Schale oder Scheiben erfordern eine frische Zitrone).
-- Der Zutatenbereich bleibt standardmäßig zugeklappt, und der aktuelle **Trefferzähler** ist schon im zugeklappten Zustand sichtbar.
+## Aktueller Stand
 
-## Wichtiger Hinweis zu QR-Codes
+- **228 Rezepte**, darunter die gemeinsam ausgearbeiteten Familienrezepte `betty001` bis `betty037`.
+- **183 Zutaten** in den neun von der Anwendung unterstützten Kategorien.
+- Die Anzeige der Rezeptanzahl wird beim Laden automatisch aus `data/recipes.json` berechnet.
+- **Sauerrahm** hat die interne Zutaten-ID `schmand`, damit vorhandene Rezepte weiter funktionieren.
+- Vier zuvor entfernte Internet-Rezepte (`q008`, `q017`, `q030`, `q067`) bleiben ausgeschlossen.
+- Das doppelt vorhandene Carbonara-Rezept `v9_001` wurde entfernt. Die persönlich ausgearbeitete Fassung `betty003` bleibt enthalten.
+- Vier Zutatenkategorien (`wurst`, `kalbfleisch`, `kuemmel`, `knoedelbrot`) wurden an die sichtbaren Kategorien angepasst.
+- Die Webseite zeigt unten **Version 1.0.1** und die dynamische Rezeptanzahl.
 
-**Neue QR-Codes erstellen.** Die Reihenfolge/Anzahl der Zutaten wurde geändert. Auf Wunsch wurde auf QR-Abwärtskompatibilität verzichtet. Neue Codes verwenden ausdrücklich das Format `?z=v9.<codierte-zutaten>&draw=1`. Alte Vorab-Codes werden absichtlich nicht mit falschen Zutaten entschlüsselt. Ein solcher Link zeigt eine Meldung an.
+## Deployment
 
-**Lokal gespeicherte Zutaten bleiben dagegen erhalten** (einschließlich der drei zusammengeführten IDs), sofern die Website ohne alten QR-Link geöffnet wird.
+Das ZIP enthält den gesamten aktuellen Projektstand. Die Dateien aus dem entpackten Ordner ins Repository übernehmen, Commit erstellen und Push durchführen. Danach die Seite neu laden (bei Bedarf Strg+F5).
 
-## Für Git Extensions: Dateien ersetzen
+Für die Webseite sind `index.html`, `app.js`, `styles.css`, `_headers`, `assets/` und `data/` erforderlich. Andere Textdateien sind Dokumentation.
 
-1. Die Datei `Bettys-Kochecke-v9-Update.zip` entpacken.
-2. Folgende Dateien in deinem bestehenden Projekt ersetzen:
-   - `app.js`
-   - `index.html`
-   - `styles.css`
-   - `data/ingredients.json`
-   - `data/recipes.json`
-3. In Git Extensions die Änderungen ansehen, **Commit** und dann **Push** ausführen.
-4. Cloudflare neu laden (falls nötig mit `Strg+F5`).
-5. Zutaten prüfen, ein zufälliges Rezept ziehen und **einen neuen QR-Code** erzeugen.
+## QR-Codes und gespeicherte Auswahlen
 
-Die Dateien `RECHERCHE-UND-QUELLEN.md` und `TESTBERICHT.md` sind nur zur Dokumentation und müssen nicht mit hochgeladen werden.
+Neue QR-Codes verwenden wie zuvor `?z=v9.<bitmaske>&draw=1`; die Zutatenreihenfolge ist in 1.0.1 **unverändert**, sodass QR-Codes der unmittelbar vorherigen Projektfassung weiterhin funktionieren. Ältere Formatversionen werden nicht unterstützt; eine zusätzliche Rückwärtskompatibilität ist ausdrücklich nicht vorgesehen.
 
-## Datenqualität und Herkunft
+Der QR-Code speichert eine Zutaten-Auswahl, nicht ein festes Rezept. Jeder Scan zieht ein passendes Zufallsrezept. Ein direkter Rezeptlink verwendet einen Rezept-Identifier; für das entfernte Rezept `v9_001` existiert kein direkter Treffer mehr.
 
-Die **121 neu hinzugefügten Rezepte** sind selbstständig formulierte Alltagsfassungen mit Zutatenmengen für zwei Portionen und mindestens drei eigenen Zubereitungsschritten. Die Rezepte wurden fachlich auf offensichtliche Plausibilität geprüft, aber **nicht gekocht, verkostet oder von Nutzern bewertet**. Bei wenigen ist ein externes Inspirationsrezept verlinkt; bei den anderen handelt es sich um eigene Vorschläge. Bestehende 75 Rezepte behalten die früheren Quellenangaben und Originalbewertungen. Solche Bewertungen gelten ausschließlich für die verlinkten Originale.
+Lokale Zutaten-Auswahlen werden im Browser gespeichert. Salz, Pfeffer und Öl gelten als Grundzutaten. Gängige Pastasorten sind im Rezeptgenerator austauschbar; eine ausgewählte Zitrone kann Zitronensaft ersetzen.
 
-Die Qualitätskriterien wurden gegenüber v7 gelockert: Wichtig sind einfache Zubereitung, plausible Zutaten, vernünftige Menge und Zeit, sowie kulinarisch sinnvolle Kombinationen. Kein globaler „Top-10-%“-Anspruch. Keine Suppen/Eintöpfe. Bei Unsicherheiten ist das Rezept vor einer Veröffentlichung noch zu testen.
+## Datenhinweis
 
-Siehe `RECHERCHE-UND-QUELLEN.md` für die konkret überprüften Rezeptportale und Links.
+Rezepte sind redaktionelle Alltagsfassungen und nicht durchgängig probegekocht. Externe Quellen oder Bewertungen gelten gegebenenfalls für die verlinkten Inspirationsrezepte, nicht für die eigene Fassung.

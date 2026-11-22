@@ -1,5 +1,7 @@
-Version 6: 149 Zutaten werden als kompakte Base64url-Bitmaske gespeichert.
-Alte QR-Codes mit 128 Zutaten werden beim Laden mit Null-Bits für die 21 neuen Zutaten ergänzt.
-Die Reihenfolge der ursprünglichen 128 Zutaten bleibt unverändert.
-Der QR-Code verlinkt weiterhin die Liste, öffnet direkt ein Zufallsrezept und zeigt den Nächstes-Rezept-Button.
-Wichtig: Wird die Cloudflare-Domain geändert, müssen bereits erzeugte QR-Codes neu erstellt werden.
+QR-Code-Status – Version 1.0.1
+
+Der aktuelle Code verwendet das QR-Format v9 und speichert die gewählten Zutaten als Bitmaske in der URL (?z=v9....&draw=1).
+Es wird bei jedem Scan ein neues passendes Zufallsrezept gewählt.
+Die 183 Zutaten bleiben in derselben Reihenfolge wie in Version 1.0.0; daher funktionieren deren QR-Codes weiterhin.
+Frühere QR-Formate werden nicht unterstützt. Es wurde bewusst keine zusätzliche Abwärtskompatibilität eingebaut.
+Wird die Domain geändert, müssen QR-Codes mit der alten Domain gegebenenfalls neu erstellt werden.

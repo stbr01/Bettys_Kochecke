@@ -1,3 +1,5 @@
+> **Historisches Recherchedokument:** Bezieht sich auf frühere Rezeptfassungen und ist kein vollständiger Quellen-/Qualitätsbericht für Version 1.0.1 (228 Rezepte). Aktueller Stand siehe `README.md`.
+
 # Recherche und Quellen – Bettys Kochecke v9
 
 Stand: 21. November 2026

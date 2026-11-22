@@ -1,12 +1,5 @@
-QUALITÄTSAUSGABE V6 – 21. November 2026
+HISTORISCHER HINWEIS (frühere Version 6, 21. November 2026)
 
-34 individuell ausgearbeitete Rezepte statt 500 automatisch erzeugter Vorlagen.
-Jedes Gericht hat Mengen für 2 Portionen, vier eigenständig formulierte Schritte
-und einen Link auf ein von Nutzerinnen und Nutzern hoch bewertetes Inspirationsrezept.
+Die damalige Version umfasste 34 individuell ausgearbeitete Rezepte und verwies auf bewertete Inspirationsrezepte. Die vereinfachten Fassungen waren nicht probegekocht.
 
-Die Bewertungen beziehen sich nur auf die verlinkten Originalrezepte.
-Die eigenen vereinfachten Fassungen sind nicht probegekocht; Kochzeiten sind Schätzungen.
-Ein exakter statistischer Nachweis der oberen 10 % eines gesamten Kochportals
-ist ohne vollständige Bewertungsdaten nicht möglich.
-
-Mehr Informationen: RECHERCHE-UND-QUELLEN.md
+AKTUELLER STAND: Siehe README.md und TESTBERICHT.md für Version 1.0.1 mit 228 Rezepten und 183 Zutaten. Frühere Zahlen und Qualitätsaussagen sind nicht auf den aktuellen Gesamtbestand übertragbar.

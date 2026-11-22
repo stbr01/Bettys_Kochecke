@@ -812,17 +812,17 @@
   {
     "id": "wurst",
     "name": "Extrawurst / Kalbspariser",
-    "category": "Fleisch & Geflügel"
+    "category": "Fleisch & Wurst"
   },
   {
     "id": "kalbfleisch",
     "name": "Kalbfleisch",
-    "category": "Fleisch & Geflügel"
+    "category": "Fleisch & Wurst"
   },
   {
     "id": "kuemmel",
     "name": "Kümmel",
-    "category": "Kräuter & Gewürze"
+    "category": "Gewürze & Kräuter"
   },
   {
     "id": "essiggurken",
@@ -832,7 +832,7 @@
   {
     "id": "knoedelbrot",
     "name": "Knödelbrot",
-    "category": "Nudeln, Reis & Getreide"
+    "category": "Beilagen & Getreide"
   },
   {
     "id": "bratwurst",

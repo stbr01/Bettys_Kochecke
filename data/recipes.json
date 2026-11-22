@@ -5441,65 +5441,6 @@
     }
   },
   {
-    "id": "v9_001",
-    "title": "Spaghetti Carbonara ohne Obers",
-    "category": "Pasta & Nudelgerichte",
-    "minutes": 25,
-    "servings": 2,
-    "ingredientIds": [
-      "spaghetti",
-      "speck",
-      "ei",
-      "parmesan"
-    ],
-    "ingredients": [
-      {
-        "id": "spaghetti",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "id": "speck",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "id": "ei",
-        "amount": 2,
-        "unit": "Stück"
-      },
-      {
-        "id": "parmesan",
-        "amount": 45,
-        "unit": "g"
-      }
-    ],
-    "description": "Sämige Eiersauce statt Schlagobers; die Hitze beim Mischen ist entscheidend.",
-    "steps": [
-      "Spaghetti in Salzwasser bissfest kochen und eine Tasse Kochwasser auffangen.",
-      "Speck in einer Pfanne bei mittlerer Hitze knusprig auslassen, dann die Pfanne vom Herd nehmen.",
-      "Eier mit fein geriebenem Parmesan und reichlich Pfeffer verquirlen.",
-      "Heiße Nudeln zum Speck geben; die Eiermischung abseits der Hitze und esslöffelweise Kochwasser unterrühren, bis eine glänzende Sauce entsteht. Nicht mehr kochen lassen."
-    ],
-    "tags": [
-      "Alltag",
-      "einfach",
-      "Pasta"
-    ],
-    "staples": [
-      "salz",
-      "pfeffer",
-      "olivenoel"
-    ],
-    "source": {
-      "site": "Einfach Kochen",
-      "url": "https://www.einfachkochen.de/rezepte/spaghetti-carbonara",
-      "asOf": "2026-11-21",
-      "note": "Thematische Inspiration; eigene nicht probegekochte Fassung. Keine externe Bewertung übernommen."
-    },
-    "editorialStatus": "Eigenständiges Alltagsrezept, nicht probegekocht"
-  },
-  {
     "id": "v9_002",
     "title": "Penne mit schneller Tomatensauce",
     "category": "Pasta & Nudelgerichte",
