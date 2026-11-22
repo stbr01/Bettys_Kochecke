@@ -10,6 +10,8 @@ async function init(){
     const [i,r] = await Promise.all([fetch("./data/ingredients.json"),fetch("./data/recipes.json")]);
     if(!i.ok || !r.ok) throw new Error("Daten konnten nicht geladen werden.");
     state.ingredients = await i.json(); state.recipes = await r.json();
+    $("recipeTotal").textContent = `${state.recipes.length} ausgewählte Alltagsrezepte`;
+    $("footerRecipeTotal").textContent = `${state.recipes.length} Rezepte`;
     const params = new URLSearchParams(location.search);
     const ids = params.get("i");
     const packed = params.get("z");
