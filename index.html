@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#f6f4ee">
   <meta name="description" content="Dein persönlicher Zufalls-Rezeptgenerator. Zutaten auswählen und passende Rezepte entdecken.">
   <title>Bettys Kochecke – Dein Rezeptgenerator</title>
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script defer src="app.js?v=12"></script>
+  <script defer src="app.js?v=13"></script>
 </head>
 <body>
   <header class="topbar">
@@ -21,7 +21,7 @@
       <img class="hero-logo" src="assets/bettys-kochecke-logo.webp" alt="Betty’s Kochecke – fröhliche Comic-Köchin mit Kochlöffel" width="1408" height="1056" fetchpriority="high">
       <div class="eyebrow">DEIN PERSÖNLICHER REZEPTFINDER</div>
       <h1>Was kochen wir <em>heute?</em></h1>
-      <p>Wähle deine Zutaten aus. Es werden nur Rezepte vorgeschlagen, für die du alle benötigten Zutaten ausgewählt hast. Gängige Pastasorten kannst du untereinander tauschen.</p>
+      <p>Wähle deine Zutaten aus. Du kannst festlegen, ob Rezepte mit bis zu zwei fehlenden Zutaten vorgeschlagen werden dürfen. Gängige Pastasorten kannst du untereinander tauschen.</p>
       <div class="hero-meta"><span>✦ <span id="recipeTotal">Rezepte werden geladen …</span></span><span>♡ Ohne Suppen & Eintöpfe</span><span>↗ Mit Pasta-Schwerpunkt</span></div>
     </section>
 
@@ -35,9 +35,13 @@
         </div>
       </div>
       <div id="ingredientControls" hidden>
+      <div class="missing-filter"><label for="maxMissing">Wie viele Zutaten dürfen fehlen?</label><select id="maxMissing" aria-label="Maximal erlaubte fehlende Zutaten"><option value="0">0 – Keine</option><option value="1">1 Zutat</option><option value="2">2 Zutaten</option></select></div>
       <div class="toolbar">
         <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Zutat suchen …" autocomplete="off"></label>
-        <button id="clearSelection" class="text-button" type="button">Auswahl leeren</button>
+        <div class="bulk-selection-actions">
+          <button id="selectAllIngredients" class="button button-outline bulk-select-all" type="button">✓ Alle Zutaten auswählen</button>
+          <button id="clearSelection" class="text-button" type="button">Alle abwählen</button>
+        </div>
       </div>
       <div id="categoryTabs" class="category-tabs" aria-label="Zutatenkategorien"></div>
       <div id="ingredientGrid" class="ingredient-groups"></div>
@@ -60,16 +64,16 @@
 
     <section class="howto">
       <div class="howto-icon">✳</div>
-      <div><strong>Deine Auswahl bleibt erhalten.</strong><p>Der Zutatenlisten-QR-Code bleibt wiederverwendbar: Jeder Scan zieht ein neues Rezept, das vollständig zu deiner Auswahl passt.</p></div>
+      <div><strong>Deine Auswahl bleibt erhalten.</strong><p>Der Zutatenlisten-QR-Code bleibt wiederverwendbar: Jeder Scan zieht ein neues Rezept passend zu deiner Auswahl und der erlaubten Anzahl fehlender Zutaten.</p></div>
     </section>
-    <footer>Ein kleiner Helfer für die tägliche Frage: Was kochen wir heute?<div style="margin-top:6px;font-size:0.8em;opacity:0.65">Betty’s Kochecke · Version 1.0.1 · <span id="footerRecipeTotal">Rezepte werden geladen …</span></div></footer>
+    <footer>Ein kleiner Helfer für die tägliche Frage: Was kochen wir heute?<div style="margin-top:6px;font-size:0.8em;opacity:0.65">Betty’s Kochecke · Version 1.0.3 · <span id="footerRecipeTotal">Rezepte werden geladen …</span></div></footer>
   </main>
 
   <dialog id="shareDialog" class="share-dialog">
     <form method="dialog"><button class="dialog-close" aria-label="Schließen">×</button></form>
     <div class="eyebrow">DEIN WIEDERVERWENDBARER ZUTATENLISTEN-CODE</div>
     <h2>Zutatenliste als QR-Code</h2>
-    <p>Der QR-Code speichert deine Zutaten-Auswahl – nicht ein bestimmtes Rezept. Bei jedem Scan öffnet sich der Rezeptgenerator mit dieser Liste und zieht automatisch ein neues passendes Zufallsrezept.</p>
+    <p>Der QR-Code speichert deine Zutaten-Auswahl – nicht ein bestimmtes Rezept. Bei jedem Scan öffnet sich der Rezeptgenerator mit dieser Liste und der gewählten Anzahl erlaubter fehlender Zutaten und zieht automatisch ein neues passendes Zufallsrezept.</p>
     <div id="qrcode" class="qr-wrap"><div class="qr-placeholder">QR-Code wird erstellt …</div></div>
     <label class="link-label" for="shareUrl">Dein persönlicher Zutatenlisten-Link</label>
     <div class="copy-row"><input id="shareUrl" readonly><button id="copyLink" class="button button-primary" type="button">Kopieren</button></div>

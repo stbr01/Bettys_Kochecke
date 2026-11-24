@@ -46,3 +46,31 @@
  .topbar #shareTop{font-size:10px;padding:9px 10px}
  .hero-logo{margin-bottom:22px;border-radius:12px}
 }
+
+/* v1.0.2 – Zutaten gesamthaft oder pro Kategorie auswählen */
+.bulk-selection-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.bulk-select-all{padding:10px 13px;white-space:nowrap}
+.ingredient-group-actions{display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.category-action{border:1px solid var(--line);border-radius:8px;padding:6px 9px;background:#fff;color:var(--green);font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap}
+.category-action:hover{background:#edf4ed;border-color:#a5bda6}
+.category-action:focus-visible,.bulk-selection-actions button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+@media(max-width:700px){
+  .toolbar{align-items:stretch;flex-wrap:wrap}
+  .toolbar .searchbox{flex:1 1 100%}
+  .bulk-selection-actions{width:100%;justify-content:space-between;gap:8px}
+  .bulk-select-all{font-size:11px;padding:9px 11px}
+  .ingredient-group-heading{align-items:flex-start}
+  .ingredient-group-actions{justify-content:flex-start;gap:6px;width:100%}
+  .ingredient-group-count{width:100%}
+  .category-action{font-size:10px;padding:7px 9px}
+}
+
+/* v1.0.3 – Allow up to two missing recipe ingredients */
+.missing-filter{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.missing-filter label{font-size:13px;font-weight:700;color:var(--ink)}
+.missing-filter select{background:#fff;border:1px solid var(--line);border-radius:10px;color:var(--green-dark);padding:10px 32px 10px 12px;font:inherit;font-size:13px;cursor:pointer}
+.missing-filter select:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.ingredient-list li.ingredient-missing{background:#fff6ec;border-radius:6px;padding-left:7px;padding-right:7px}
+.missing-tag{display:inline-block;font-size:10px;font-weight:700;color:#9b4a13;background:#ffe4c5;padding:2px 5px;border-radius:5px;margin-left:5px}
+.missing-count{color:#9b4a13;font-weight:700}
+@media(max-width:700px){.missing-filter{align-items:stretch;flex-direction:column;gap:7px}.missing-filter select{width:100%}}

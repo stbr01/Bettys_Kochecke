@@ -1,4 +1,4 @@
-# Bettys Kochecke – Version 1.0.1
+# Bettys Kochecke – Version 1.0.3
 
 Persönlicher Rezeptgenerator mit Zutaten-Auswahl, Zufallsrezepten, Rezeptlinks und wiederverwendbaren Zutatenlisten-QR-Codes. Bereitstellung als statische Webseite, z. B. über Cloudflare Pages.
 
@@ -11,13 +11,17 @@ Persönlicher Rezeptgenerator mit Zutaten-Auswahl, Zufallsrezepten, Rezeptlinks 
 - Vier zuvor entfernte Internet-Rezepte (`q008`, `q017`, `q030`, `q067`) bleiben ausgeschlossen.
 - Das doppelt vorhandene Carbonara-Rezept `v9_001` wurde entfernt. Die persönlich ausgearbeitete Fassung `betty003` bleibt enthalten.
 - Vier Zutatenkategorien (`wurst`, `kalbfleisch`, `kuemmel`, `knoedelbrot`) wurden an die sichtbaren Kategorien angepasst.
-- Die Webseite zeigt unten **Version 1.0.1** und die dynamische Rezeptanzahl.
+- Die Webseite zeigt unten **Version 1.0.3** und die dynamische Rezeptanzahl.
 
 ## Deployment
 
 Das ZIP enthält den gesamten aktuellen Projektstand. Die Dateien aus dem entpackten Ordner ins Repository übernehmen, Commit erstellen und Push durchführen. Danach die Seite neu laden (bei Bedarf Strg+F5).
 
 Für die Webseite sind `index.html`, `app.js`, `styles.css`, `_headers`, `assets/` und `data/` erforderlich. Andere Textdateien sind Dokumentation.
+
+## Toleranz für fehlende Zutaten (v1.0.3)
+
+Das Dropdown erlaubt 0, 1 oder 2 fehlende Rezeptzutaten. Bei 0 ist der Filter wie bisher strikt. Fehlende Zutaten werden im Rezept gelb hervorgehoben. Die aktuelle Toleranz wird im lokalen Browser gespeichert und mit dem URL-Parameter `m=1` bzw. `m=2` sowohl in QR-Codes als auch in direkten Rezeptlinks übertragen. Fehlt `m` in alten Links, ist die Toleranz 0. Pasta-Austausch und Zitronensaft-aus-Zitrone werden weiterhin berücksichtigt. Die bisherige Mindestanforderung von zwei ausgewählten Zutaten bleibt erhalten.
 
 ## QR-Codes und gespeicherte Auswahlen
 

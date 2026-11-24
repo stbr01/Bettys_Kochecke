@@ -1,4 +1,4 @@
-const state = { ingredients: [], recipes: [], selected: new Set(), activeCategory: "Alle", lastRecipeIds: [] };
+const state = { ingredients: [], recipes: [], selected: new Set(), activeCategory: "Alle", maxMissing: 0, lastRecipeIds: [] };
 const $ = (id) => document.getElementById(id);
 // Nine ingredient groups, sorted alphabetically for display.
 // v9 intentionally starts a fresh QR format to avoid misinterpreting old bit positions.
@@ -15,6 +15,13 @@ async function init(){
     const params = new URLSearchParams(location.search);
     const ids = params.get("i");
     const packed = params.get("z");
+    // The tolerance travels with both QR links and direct recipe links.
+    // Shared links without an m parameter retain the original strict behavior.
+    const sharedLink = params.has("z") || params.has("i") || params.has("recipe") || params.has("draw");
+    const savedMissing = Number(localStorage.getItem("recipe-generator-max-missing"));
+    const requestedMissing = params.has("m") ? Number(params.get("m")) : (sharedLink ? 0 : savedMissing);
+    state.maxMissing = Number.isInteger(requestedMissing) && requestedMissing>=0 && requestedMissing<=2 ? requestedMissing : 0;
+    $("maxMissing").value = String(state.maxMissing);
     const oldQrLink = packed !== null && !/^v9\.[A-Za-z0-9_-]+$/.test(packed);
     if(packed !== null) decodeSelection(packed).forEach(id=>state.selected.add(id));
     else if(ids !== null) ids.split(",").forEach(id=>{if(state.ingredients.some(x=>x.id===id)) state.selected.add(id)});
@@ -36,7 +43,12 @@ async function init(){
       }
       renderIngredients();
     });
-    $("clearSelection").addEventListener("click",()=>{state.selected.clear();updateSelection({clearRecipe:true});renderIngredients();});
+    $("maxMissing").addEventListener("change",()=>{
+      state.maxMissing=Number($("maxMissing").value);
+      updateSelection({clearRecipe:true});
+    });
+    $("selectAllIngredients").addEventListener("click",()=>changeIngredientSelection(state.ingredients,true));
+    $("clearSelection").addEventListener("click",()=>changeIngredientSelection(state.ingredients,false));
     $("findRecipe").addEventListener("click",showRandomRecipe);
     $("anotherRecipe").addEventListener("click",showRandomRecipe);
     $("shareTop").addEventListener("click",openShare);
@@ -84,6 +96,13 @@ function renderCategories(){
     renderIngredients();
   }));
 }
+// Update all ingredients in one operation so the URL, stored selection,
+// live match count and any displayed recipe remain in sync.
+function changeIngredientSelection(items,select){
+  items.forEach(item=>select?state.selected.add(item.id):state.selected.delete(item.id));
+  updateSelection({clearRecipe:true});
+  renderIngredients();
+}
 function renderIngredients(){
   const q=$("search").value.trim().toLocaleLowerCase("de");
   const visibleCategories=state.activeCategory==="Alle"?categoryOrder.slice(1):[state.activeCategory];
@@ -100,12 +119,20 @@ function renderIngredients(){
     return `<section class="ingredient-group" aria-labelledby="${headingId}">
       <div class="ingredient-group-heading">
         <h3 id="${headingId}"><span aria-hidden="true">${categoryEmoji[cat]||""}</span> ${escapeHtml(cat)}</h3>
-        <span class="ingredient-group-count">${items.length} Zutaten · ${selectedCount} ausgewählt</span>
+        <div class="ingredient-group-actions">
+          <span class="ingredient-group-count">${items.length} angezeigt · ${selectedCount} ausgewählt</span>
+          <button type="button" class="category-action" data-action="select" data-category="${escapeHtml(cat)}" aria-label="Alle Zutaten in ${escapeHtml(cat)} auswählen">Alle auswählen</button>
+          <button type="button" class="category-action" data-action="clear" data-category="${escapeHtml(cat)}" aria-label="Alle Zutaten in ${escapeHtml(cat)} abwählen">Alle abwählen</button>
+        </div>
       </div>
       <div class="ingredient-grid">${tiles}</div>
     </section>`;
   }).filter(Boolean);
   $("ingredientGrid").innerHTML=groups.length?groups.join(""):`<div class="empty-state">Keine Zutaten gefunden.</div>`;
+  $("ingredientGrid").querySelectorAll(".category-action").forEach(button=>button.addEventListener("click",()=>{
+    const items=state.ingredients.filter(item=>item.category===button.dataset.category);
+    changeIngredientSelection(items,button.dataset.action==="select");
+  }));
   $("ingredientGrid").querySelectorAll("input").forEach(input=>input.addEventListener("change",()=>{
     input.checked?state.selected.add(input.value):state.selected.delete(input.value);
     persistSelection();
@@ -134,10 +161,15 @@ function decodeSelection(value){
 }
 function setSelectionParams(params){
   params.delete("i");
+  if(state.maxMissing>0)params.set("m",String(state.maxMissing));
+  else params.delete("m");
   if(state.selected.size)params.set("z",encodeSelection());
   else params.delete("z");
 }
-function persistSelection(){localStorage.setItem("recipe-generator-selection",JSON.stringify([...state.selected]));}
+function persistSelection(){
+  localStorage.setItem("recipe-generator-selection",JSON.stringify([...state.selected]));
+  localStorage.setItem("recipe-generator-max-missing",String(state.maxMissing));
+}
 function updateSelection(options={}){
   $("selectedCount").textContent=state.selected.size;
   const matches = state.selected.size >= 2 ? state.recipes.filter(r => resolveRecipe(r)).length : 0;
@@ -145,7 +177,9 @@ function updateSelection(options={}){
   $("findRecipe").disabled=state.selected.size<2 || matches===0;
   $("selectionHint").textContent=state.selected.size<2
     ?"Wähle mindestens zwei Zutaten aus."
-    :matches===0 ? "Noch kein vollständiges Rezept: Wähle weitere Zutaten aus." : `${matches} passende Rezepte: Alle benötigten Zutaten sind vorhanden.`;
+    :matches===0 ? `Keine passenden Rezepte mit maximal ${state.maxMissing} fehlenden Zutaten. Wähle weitere Zutaten aus.`
+    :state.maxMissing===0 ? `${matches} passende Rezepte: Alle benötigten Zutaten sind vorhanden.`
+    :`${matches} passende Rezepte mit maximal ${state.maxMissing} fehlenden ${state.maxMissing===1?"Zutat":"Zutaten"}.`;
   persistSelection();
   const p=new URLSearchParams(location.search);
   setSelectionParams(p);
@@ -187,8 +221,9 @@ function resolveRecipe(recipe){
     if(id==="zitronensaft"&&!state.selected.has("zitronensaft")&&state.selected.has("zitrone"))return "zitrone";
     return id;
   });
-  if(!ids.every(id=>state.selected.has(id)))return null;
-  return {ids,originalShape:replacement?originalShape:null,replacement:replacement||null,
+  const missingIds=[...new Set(ids.filter(id=>!state.selected.has(id)))];
+  if(missingIds.length>state.maxMissing)return null;
+  return {ids,missingIds,originalShape:replacement?originalShape:null,replacement:replacement||null,
     lemonReplacement:recipe.ingredientIds.includes("zitronensaft")&&ids.includes("zitrone")&&!state.selected.has("zitronensaft")};
 }
 function swapPastaWord(text,matched){
@@ -200,12 +235,12 @@ function swapPastaWord(text,matched){
 }
 function showRandomRecipe(){
   if(state.selected.size<2)return;
-  // Every required ingredient must be active; only pasta shapes may replace each other.
+  // Count missing ingredients according to the chosen tolerance; preserve substitutions.
   const matching=state.recipes.map(r=>({recipe:r,matching:resolveRecipe(r)})).filter(x=>x.matching);
   if(!matching.length){
     const p=new URLSearchParams();setSelectionParams(p);
     history.replaceState(null,"",location.pathname+"?"+p.toString());
-    showNoMatch("Leider gibt es noch kein Gericht, für das alle benötigten Zutaten in deiner Auswahl enthalten sind. Wähle weitere Zutaten aus. Bei normalen Nudelgerichten können unterschiedliche Pastasorten verwendet werden.");
+    showNoMatch(`Leider gibt es kein Gericht mit maximal ${state.maxMissing} fehlenden Zutaten. Wähle weitere Zutaten oder erhöhe die erlaubte Anzahl fehlender Zutaten.`);
     return;
   }
   let pool=matching.filter(x=>!state.lastRecipeIds.includes(x.recipe.id));
@@ -222,7 +257,11 @@ function renderRecipe(r, resolved=resolveRecipe(r)){
   if(!resolved)return;
   const names=new Map(state.ingredients.map(x=>[x.id,x.name]));
   const ingredients=r.ingredients.map((x,index)=>({...x,originalId:x.id,id:resolved.ids[index]}));
-  const list=ingredients.map(x=>`<li><span>${escapeHtml(x.originalId==="zitronensaft"&&x.id==="zitrone"?"Zitronensaft (aus Zitrone)":names.get(x.id)||x.id)}</span><small>${escapeHtml(x.amount)} ${escapeHtml(x.unit)}</small></li>`).join("");
+  const list=ingredients.map(x=>{
+    const missing=resolved.missingIds.includes(x.id);
+    const display=x.originalId==="zitronensaft"&&x.id==="zitrone"?"Zitronensaft (aus Zitrone)":names.get(x.id)||x.id;
+    return `<li class="${missing?"ingredient-missing":""}"><span>${escapeHtml(display)}${missing?' <strong class="missing-tag">Fehlt</strong>':""}</span><small>${escapeHtml(x.amount)} ${escapeHtml(x.unit)}</small></li>`;
+  }).join("");
   const staples=(r.staples||["salz","pfeffer","olivenoel"]).map(id=>({salz:"Salz",pfeffer:"Pfeffer",olivenoel:"Öl"}[id]||id));
   const stapleLi=staples.length?`<li><span>${escapeHtml(staples.join(", "))}</span><small>nach Bedarf</small></li>`:"";
   const source=r.source&&/^https:\/\//.test(r.source.url)?r.source:null;
@@ -231,11 +270,11 @@ function renderRecipe(r, resolved=resolveRecipe(r)){
   $("recipeCard").innerHTML=`
     <div class="recipe-topline"><span class="pill">${escapeHtml(r.category)}</span><span class="pill">🎲 Zufallstreffer</span></div>
     <h2 class="recipe-title">${escapeHtml(swapPastaWord(r.title,resolved))}</h2><p class="recipe-description">${escapeHtml(r.description)}</p>
-    <div class="recipe-meta"><span>◷ ${r.minutes} Minuten</span><span>♧ ${r.servings} Portionen</span><span>✓ ${resolved.ids.length} Zutaten aus deiner Auswahl</span></div>
+    <div class="recipe-meta"><span>◷ ${r.minutes} Minuten</span><span>♧ ${r.servings} Portionen</span><span>✓ ${resolved.ids.length-resolved.missingIds.length} von ${resolved.ids.length} Zutaten vorhanden</span>${resolved.missingIds.length?`<span class="missing-count">${resolved.missingIds.length} ${resolved.missingIds.length===1?"Zutat fehlt":"Zutaten fehlen"}</span>`:""}</div>
     <div class="recipe-columns"><section><h3>Zutaten</h3><ul class="ingredient-list">${list}${stapleLi}</ul></section>
     <section><h3>Zubereitung</h3><ol class="steps">${r.steps.map(s=>`<li>${escapeHtml(swapPastaWord(s,resolved))}</li>`).join("")}</ol></section></div>
     ${sourceLine}`;
-  $("matchNote").textContent=`Alle ${resolved.ids.length} benötigten Rezeptzutaten sind in deiner Auswahl enthalten.${resolved.replacement?" Die Nudelsorte wurde passend zu deinem Vorrat getauscht.":""}${resolved.lemonReplacement?" Zitronensaft wird aus deiner ausgewählten frischen Zitrone gewonnen.":""} Salz, Pfeffer und Öl gelten, soweit benötigt, als Grundzutaten.`;
+  $("matchNote").textContent=`${resolved.missingIds.length?`Dir ${resolved.missingIds.length===1?"fehlt":"fehlen"} noch ${resolved.missingIds.map(id=>names.get(id)||id).join(", ")}.`:`Alle ${resolved.ids.length} benötigten Rezeptzutaten sind in deiner Auswahl enthalten.`}${resolved.replacement?" Die Nudelsorte wurde passend zu deinem Vorrat getauscht.":""}${resolved.lemonReplacement?" Zitronensaft wird aus deiner ausgewählten frischen Zitrone gewonnen.":""} Salz, Pfeffer und Öl gelten, soweit benötigt, als Grundzutaten.`;
 }
 function currentShareUrl(){
   const url=new URL(location.href);url.search="";url.hash="";
